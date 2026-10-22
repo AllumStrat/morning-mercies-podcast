@@ -80,7 +80,7 @@ List every quoted source in `sources`.
 python3 scripts/podcast.py stage
 ```
 
-This copies your script, metadata, and research into `incoming/DATE/` and pushes them to a `claude/episode-DATE` branch. A GitHub Action on that branch then makes the audio, attaches it to a GitHub Release, updates the feed and series state on `gh-pages`, deletes audio older than 60 days, and removes the branch.
+This copies your script, metadata, and research into `incoming/DATE/` and pushes them to a `claude/episode-DATE` branch. A GitHub Action on that branch then makes the audio, stores it (next to the feed on `gh-pages` for Grace's show), updates the feed and series state, deletes audio older than the show's retention window, and removes the branch.
 
 - If it rejects the script as too short, expand the script with more substance from your research, not padding, and run it again.
 - If the push fails, run it once more. If it fails again, stop and report the error.
