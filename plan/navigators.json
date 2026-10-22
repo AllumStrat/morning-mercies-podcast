@@ -1,0 +1,6307 @@
+{
+ "name": "The Navigators Bible Reading Plan",
+ "source": "https://navlink.org/bible-reading-plan",
+ "note": "25 readings per month, 300 total. Daily tracks as published: Gospels/Acts, rest of NT, Psalms/Wisdom, Old Testament.",
+ "days": [
+  {
+   "id": "1-1",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 1:1-17"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 1:1-11"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 1"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Genesis 1-2"
+    }
+   ]
+  },
+  {
+   "id": "1-2",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 1:18-25"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 1:12-26"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 2"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Genesis 3-4"
+    }
+   ]
+  },
+  {
+   "id": "1-3",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 2:1-12"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 2:1-21"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 3"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Genesis 5-8"
+    }
+   ]
+  },
+  {
+   "id": "1-4",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 2:13-23"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 2:22-47"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 4"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Genesis 9-11"
+    }
+   ]
+  },
+  {
+   "id": "1-5",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 3:1-12"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 3"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 5"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Genesis 12-14"
+    }
+   ]
+  },
+  {
+   "id": "1-6",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 3:13-17"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 4:1-22"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 6"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Genesis 15-17"
+    }
+   ]
+  },
+  {
+   "id": "1-7",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 4:1-11"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 4:23-37"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 7"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Genesis 18-20"
+    }
+   ]
+  },
+  {
+   "id": "1-8",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 4:12-17"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 5:1-16"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 8"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Genesis 21-23"
+    }
+   ]
+  },
+  {
+   "id": "1-9",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 4:18-25"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 5:17-42"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 9"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Genesis 24"
+    }
+   ]
+  },
+  {
+   "id": "1-10",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 5:1-12"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 6"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 10"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Genesis 25-26"
+    }
+   ]
+  },
+  {
+   "id": "1-11",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 5:13-20"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 7:1-38"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 11"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Genesis 27-28"
+    }
+   ]
+  },
+  {
+   "id": "1-12",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 5:21-32"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 7:39-60"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 12"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Genesis 29-30"
+    }
+   ]
+  },
+  {
+   "id": "1-13",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 5:33-48"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 8:1-25"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 13"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Genesis 31"
+    }
+   ]
+  },
+  {
+   "id": "1-14",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 6:1-15"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 8:26-40"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 14"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Genesis 32-33"
+    }
+   ]
+  },
+  {
+   "id": "1-15",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 6:16-24"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 9:1-19"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 15"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Genesis 34-35"
+    }
+   ]
+  },
+  {
+   "id": "1-16",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 6:25-34"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 9:20-43"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 16"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Genesis 36"
+    }
+   ]
+  },
+  {
+   "id": "1-17",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 7:1-14"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 10:1-23"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 17"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Genesis 37-38"
+    }
+   ]
+  },
+  {
+   "id": "1-18",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 7:15-29"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 10:24-48"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 18:1-24"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Genesis 39-40"
+    }
+   ]
+  },
+  {
+   "id": "1-19",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 8:1-13"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 11:1-18"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 18:25-50"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Genesis 41"
+    }
+   ]
+  },
+  {
+   "id": "1-20",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 8:14-22"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 11:19-30"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 19"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Genesis 42-43"
+    }
+   ]
+  },
+  {
+   "id": "1-21",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 8:23-34"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 12"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 20"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Genesis 44-45"
+    }
+   ]
+  },
+  {
+   "id": "1-22",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 9:1-13"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 13:1-25"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 21"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Genesis 46-47"
+    }
+   ]
+  },
+  {
+   "id": "1-23",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 9:14-26"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 13:26-52"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 22:1-11"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Genesis 48"
+    }
+   ]
+  },
+  {
+   "id": "1-24",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 9:27-38"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 14"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 22:12-31"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Genesis 49"
+    }
+   ]
+  },
+  {
+   "id": "1-25",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 10:1-20"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 15:1-21"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 23"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Genesis 50"
+    }
+   ]
+  },
+  {
+   "id": "2-1",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 10:21-42"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 15:22-41"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 24"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Exodus 1-3"
+    }
+   ]
+  },
+  {
+   "id": "2-2",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 11:1-19"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 16:1-15"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 25"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Exodus 4-6"
+    }
+   ]
+  },
+  {
+   "id": "2-3",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 11:20-30"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 16:16-40"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 26"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Exodus 7-9"
+    }
+   ]
+  },
+  {
+   "id": "2-4",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 12:1-21"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 17:1-15"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 27"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Exodus 10-12"
+    }
+   ]
+  },
+  {
+   "id": "2-5",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 12:22-37"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 17:16-34"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 28"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Exodus 13-15"
+    }
+   ]
+  },
+  {
+   "id": "2-6",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 12:38-50"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 18:1-17"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 29"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Exodus 16-18"
+    }
+   ]
+  },
+  {
+   "id": "2-7",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 13:1-23"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 18:18-28"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 30"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Exodus 19-20"
+    }
+   ]
+  },
+  {
+   "id": "2-8",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 13:24-43"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 19:1-22"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 31"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Exodus 21-23"
+    }
+   ]
+  },
+  {
+   "id": "2-9",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 13:44-58"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 19:23-41"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 32"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Exodus 24-26"
+    }
+   ]
+  },
+  {
+   "id": "2-10",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 14:1-21"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 20:1-12"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 33"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Exodus 27-29"
+    }
+   ]
+  },
+  {
+   "id": "2-11",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 14:22-36"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 20:13-38"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 34"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Exodus 30-31"
+    }
+   ]
+  },
+  {
+   "id": "2-12",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 15:1-20"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 21:1-26"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 35"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Exodus 32-33"
+    }
+   ]
+  },
+  {
+   "id": "2-13",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 15:21-39"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 21:27-40"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 36"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Exodus 34"
+    }
+   ]
+  },
+  {
+   "id": "2-14",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 16:1-12"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 22"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 37:1-22"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Exodus 35-37"
+    }
+   ]
+  },
+  {
+   "id": "2-15",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 16:13-28"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 23:1-11"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 37:23-40"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Exodus 38-40"
+    }
+   ]
+  },
+  {
+   "id": "2-16",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 17:1-13"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 23:12-35"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 38"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Leviticus 1-4"
+    }
+   ]
+  },
+  {
+   "id": "2-17",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 17:14-27"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 24"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 39"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Leviticus 5-7"
+    }
+   ]
+  },
+  {
+   "id": "2-18",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 18:1-14"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 25:1-12"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 40"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Leviticus 8-10"
+    }
+   ]
+  },
+  {
+   "id": "2-19",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 18:15-35"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 25:13-27"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 41"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Leviticus 11-13"
+    }
+   ]
+  },
+  {
+   "id": "2-20",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 19:1-15"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 26:1-18"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 42"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Leviticus 14-15"
+    }
+   ]
+  },
+  {
+   "id": "2-21",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 19:16-30"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 26:19-32"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 43"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Leviticus 16-17"
+    }
+   ]
+  },
+  {
+   "id": "2-22",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 20:1-16"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 27:1-26"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 44"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Leviticus 18-20"
+    }
+   ]
+  },
+  {
+   "id": "2-23",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 20:17-34"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 27:27-44"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 45"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Leviticus 21-23"
+    }
+   ]
+  },
+  {
+   "id": "2-24",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 21:1-11"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 28:1-16"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 46"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Leviticus 24-25"
+    }
+   ]
+  },
+  {
+   "id": "2-25",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 21:12-22"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Acts 28:17-31"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 47"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Leviticus 26-27"
+    }
+   ]
+  },
+  {
+   "id": "3-1",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 21:23-32"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Romans 1:1-17"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 48"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Numbers 1-2"
+    }
+   ]
+  },
+  {
+   "id": "3-2",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 21:33-46"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Romans 1:18-32"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 49"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Numbers 3-4"
+    }
+   ]
+  },
+  {
+   "id": "3-3",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 22:1-14"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Romans 2"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 50"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Numbers 5-6"
+    }
+   ]
+  },
+  {
+   "id": "3-4",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 22:15-33"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Romans 3"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 51"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Numbers 7-8"
+    }
+   ]
+  },
+  {
+   "id": "3-5",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 22:34-46"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Romans 4"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 52"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Numbers 9-11"
+    }
+   ]
+  },
+  {
+   "id": "3-6",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 23:1-12"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Romans 5:1-11"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 53"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Numbers 12-14"
+    }
+   ]
+  },
+  {
+   "id": "3-7",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 23:13-24"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Romans 5:12-21"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 54"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Numbers 15-17"
+    }
+   ]
+  },
+  {
+   "id": "3-8",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 23:25-39"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Romans 6:1-14"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 55"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Numbers 18-20"
+    }
+   ]
+  },
+  {
+   "id": "3-9",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 24:1-14"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Romans 6:15-23"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 56"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Numbers 21-22"
+    }
+   ]
+  },
+  {
+   "id": "3-10",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 24:15-35"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Romans 7:1-12"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 57"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Numbers 23-25"
+    }
+   ]
+  },
+  {
+   "id": "3-11",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 24:36-51"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Romans 7:13-25"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 58"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Numbers 26-27"
+    }
+   ]
+  },
+  {
+   "id": "3-12",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 25:1-13"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Romans 8:1-17"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 59"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Numbers 28-30"
+    }
+   ]
+  },
+  {
+   "id": "3-13",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 25:14-30"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Romans 8:18-39"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 60"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Numbers 31-32"
+    }
+   ]
+  },
+  {
+   "id": "3-14",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 25:31-46"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Romans 9:1-18"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 61"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Numbers 33-36"
+    }
+   ]
+  },
+  {
+   "id": "3-15",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 26:1-16"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Romans 9:19-33"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 62"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Deuteronomy 1-3"
+    }
+   ]
+  },
+  {
+   "id": "3-16",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 26:17-35"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Romans 10"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 63"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Deuteronomy 4-5"
+    }
+   ]
+  },
+  {
+   "id": "3-17",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 26:36-56"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Romans 11:1-24"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 64"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Deuteronomy 6-8"
+    }
+   ]
+  },
+  {
+   "id": "3-18",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 26:57-75"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Romans 11:25-36"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 65"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Deuteronomy 9-12"
+    }
+   ]
+  },
+  {
+   "id": "3-19",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 27:1-10"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Romans 12:1-8"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 66"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Deuteronomy 13-17"
+    }
+   ]
+  },
+  {
+   "id": "3-20",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 27:11-26"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Romans 12:9-21"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 67"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Deuteronomy 18-21"
+    }
+   ]
+  },
+  {
+   "id": "3-21",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 27:27-44"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Romans 13"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 68"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Deuteronomy 22-26"
+    }
+   ]
+  },
+  {
+   "id": "3-22",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 27:45-56"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Romans 14"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 69:1-18"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Deuteronomy 27-28"
+    }
+   ]
+  },
+  {
+   "id": "3-23",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 27:57-66"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Romans 15:1-13"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 69:19-36"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Deuteronomy 29-31"
+    }
+   ]
+  },
+  {
+   "id": "3-24",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 28:1-10"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Romans 15:14-33"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 70"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Deuteronomy 32"
+    }
+   ]
+  },
+  {
+   "id": "3-25",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Matthew 28:11-20"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Romans 16"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 71"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Deuteronomy 33-34"
+    }
+   ]
+  },
+  {
+   "id": "4-1",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 1:1-8"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Corinthians 1:1-17"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 72"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Joshua 1-2"
+    }
+   ]
+  },
+  {
+   "id": "4-2",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 1:9-20"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Corinthians 1:18-31"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 73"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Joshua 3-5"
+    }
+   ]
+  },
+  {
+   "id": "4-3",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 1:21-34"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Corinthians 2"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 74"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Joshua 6-7"
+    }
+   ]
+  },
+  {
+   "id": "4-4",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 1:35-45"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Corinthians 3"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 75"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Joshua 8-9"
+    }
+   ]
+  },
+  {
+   "id": "4-5",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 2:1-12"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Corinthians 4"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 76"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Joshua 10-12"
+    }
+   ]
+  },
+  {
+   "id": "4-6",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 2:13-17"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Corinthians 5"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 77"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Joshua 13-14"
+    }
+   ]
+  },
+  {
+   "id": "4-7",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 2:18-28"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Corinthians 6:1-11"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 78:1-39"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Joshua 15-17"
+    }
+   ]
+  },
+  {
+   "id": "4-8",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 3:1-19"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Corinthians 6:12-20"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 78:40-72"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Joshua 18-19"
+    }
+   ]
+  },
+  {
+   "id": "4-9",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 3:20-35"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Corinthians 7:1-16"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 79"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Joshua 20-21"
+    }
+   ]
+  },
+  {
+   "id": "4-10",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 4:1-20"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Corinthians 7:17-40"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 80"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Joshua 22-23"
+    }
+   ]
+  },
+  {
+   "id": "4-11",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 4:21-41"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Corinthians 8"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 81"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Joshua 24"
+    }
+   ]
+  },
+  {
+   "id": "4-12",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 5:1-20"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Corinthians 9:1-12"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 82"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Judges 1-3"
+    }
+   ]
+  },
+  {
+   "id": "4-13",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 5:21-43"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Corinthians 9:13-27"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 83"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Judges 4-5"
+    }
+   ]
+  },
+  {
+   "id": "4-14",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 6:1-13"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Corinthians 10:1-13"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 84"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Judges 6-7"
+    }
+   ]
+  },
+  {
+   "id": "4-15",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 6:14-29"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Corinthians 10:14-33"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 85"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Judges 8"
+    }
+   ]
+  },
+  {
+   "id": "4-16",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 6:30-44"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Corinthians 11:1-16"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 86"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Judges 9"
+    }
+   ]
+  },
+  {
+   "id": "4-17",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 6:45-56"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Corinthians 11:17-34"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 87"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Judges 10-12"
+    }
+   ]
+  },
+  {
+   "id": "4-18",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 7:1-23"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Corinthians 12:1-13"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 88"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Judges 13-15"
+    }
+   ]
+  },
+  {
+   "id": "4-19",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 7:24-37"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Corinthians 12:14-31"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 89:1-18"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Judges 16"
+    }
+   ]
+  },
+  {
+   "id": "4-20",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 8:1-13"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Corinthians 13"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 89:19-52"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Judges 17-18"
+    }
+   ]
+  },
+  {
+   "id": "4-21",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 8:14-21"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Corinthians 14:1-25"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 90"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Judges 19"
+    }
+   ]
+  },
+  {
+   "id": "4-22",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 8:22-30"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Corinthians 14:26-40"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 91"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Judges 20-21"
+    }
+   ]
+  },
+  {
+   "id": "4-23",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 8:31-38"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Corinthians 15:1-28"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 92"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Ruth 1"
+    }
+   ]
+  },
+  {
+   "id": "4-24",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 9:1-13"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Corinthians 15:29-58"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 93"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Ruth 2-3"
+    }
+   ]
+  },
+  {
+   "id": "4-25",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 9:14-32"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Corinthians 16"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 94"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Ruth 4"
+    }
+   ]
+  },
+  {
+   "id": "5-1",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 9:33-50"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Corinthians 1:1-11"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 95"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Samuel 1-2"
+    }
+   ]
+  },
+  {
+   "id": "5-2",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 10:1-16"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Corinthians 1:12-24"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 96"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Samuel 3-5"
+    }
+   ]
+  },
+  {
+   "id": "5-3",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 10:17-34"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Corinthians 2"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 97"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Samuel 6-8"
+    }
+   ]
+  },
+  {
+   "id": "5-4",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 10:35-52"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Corinthians 3"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 98"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Samuel 9-10"
+    }
+   ]
+  },
+  {
+   "id": "5-5",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 11:1-11"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Corinthians 4"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 99"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Samuel 11-13"
+    }
+   ]
+  },
+  {
+   "id": "5-6",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 11:12-26"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Corinthians 5"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 100"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Samuel 14"
+    }
+   ]
+  },
+  {
+   "id": "5-7",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 11:27-33"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Corinthians 6"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 101"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Samuel 15-16"
+    }
+   ]
+  },
+  {
+   "id": "5-8",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 12:1-12"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Corinthians 7"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 102"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Samuel 17-18"
+    }
+   ]
+  },
+  {
+   "id": "5-9",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 12:13-27"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Corinthians 8"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 103"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Samuel 19-20"
+    }
+   ]
+  },
+  {
+   "id": "5-10",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 12:28-34"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Corinthians 9"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 104"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Samuel 21-23"
+    }
+   ]
+  },
+  {
+   "id": "5-11",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 12:35-44"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Corinthians 10"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 105"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Samuel 24-25"
+    }
+   ]
+  },
+  {
+   "id": "5-12",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 13:1-13"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Corinthians 11:1-15"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 106:1-23"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Samuel 26-28"
+    }
+   ]
+  },
+  {
+   "id": "5-13",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 13:14-31"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Corinthians 11:16-33"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 106:24-48"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Samuel 29-31"
+    }
+   ]
+  },
+  {
+   "id": "5-14",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 13:32-37"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Corinthians 12:1-10"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 107"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Samuel 1-2"
+    }
+   ]
+  },
+  {
+   "id": "5-15",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 14:1-11"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Corinthians 12:11-21"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 108"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Samuel 3-4"
+    }
+   ]
+  },
+  {
+   "id": "5-16",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 14:12-31"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Corinthians 13"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 109"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Samuel 5-7"
+    }
+   ]
+  },
+  {
+   "id": "5-17",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 14:32-42"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Galatians 1"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 110"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Samuel 8-10"
+    }
+   ]
+  },
+  {
+   "id": "5-18",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 14:43-52"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Galatians 2"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 111"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Samuel 11-12"
+    }
+   ]
+  },
+  {
+   "id": "5-19",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 14:53-65"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Galatians 3:1-14"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 112"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Samuel 13"
+    }
+   ]
+  },
+  {
+   "id": "5-20",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 14:66-72"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Galatians 3:15-29"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 113"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Samuel 14-15"
+    }
+   ]
+  },
+  {
+   "id": "5-21",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 15:1-15"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Galatians 4:1-20"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 114"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Samuel 16-17"
+    }
+   ]
+  },
+  {
+   "id": "5-22",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 15:16-32"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Galatians 4:21-31"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 115"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Samuel 18-19"
+    }
+   ]
+  },
+  {
+   "id": "5-23",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 15:33-41"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Galatians 5:1-12"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 116"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Samuel 20-21"
+    }
+   ]
+  },
+  {
+   "id": "5-24",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 15:42-47"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Galatians 5:13-26"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 117"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Samuel 22"
+    }
+   ]
+  },
+  {
+   "id": "5-25",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Mark 16"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Galatians 6"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 118"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Samuel 23-24"
+    }
+   ]
+  },
+  {
+   "id": "6-1",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 1:1-25"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Ephesians 1:1-14"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 119:1-8"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Kings 1"
+    }
+   ]
+  },
+  {
+   "id": "6-2",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 1:26-38"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Ephesians 1:15-23"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 119:9-16"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Kings 2-3"
+    }
+   ]
+  },
+  {
+   "id": "6-3",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 1:39-56"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Ephesians 2:1-10"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 119:17-24"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Kings 4-5"
+    }
+   ]
+  },
+  {
+   "id": "6-4",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 1:57-66"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Ephesians 2:11-22"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 119:25-32"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Kings 6-7"
+    }
+   ]
+  },
+  {
+   "id": "6-5",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 1:67-80"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Ephesians 3:1-13"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 119:33-40"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Kings 8"
+    }
+   ]
+  },
+  {
+   "id": "6-6",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 2:1-20"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Ephesians 3:14-21"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 119:41-48"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Kings 9-10"
+    }
+   ]
+  },
+  {
+   "id": "6-7",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 2:21-40"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Ephesians 4:1-16"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 119:49-56"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Kings 11"
+    }
+   ]
+  },
+  {
+   "id": "6-8",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 2:41-52"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Ephesians 4:17-24"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 119:57-64"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Kings 12"
+    }
+   ]
+  },
+  {
+   "id": "6-9",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 3:1-20"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Ephesians 4:25-32"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 119:65-72"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Kings 13-14"
+    }
+   ]
+  },
+  {
+   "id": "6-10",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 3:21-38"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Ephesians 5:1-21"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 119:73-80"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Kings 15-16"
+    }
+   ]
+  },
+  {
+   "id": "6-11",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 4:1-12"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Ephesians 5:22-33"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 119:81-88"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Kings 17-18"
+    }
+   ]
+  },
+  {
+   "id": "6-12",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 4:13-30"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Ephesians 6:1-9"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 119:89-96"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Kings 19-20"
+    }
+   ]
+  },
+  {
+   "id": "6-13",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 4:31-37"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Ephesians 6:10-24"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 119:97-104"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Kings 21-22"
+    }
+   ]
+  },
+  {
+   "id": "6-14",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 4:38-44"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Philippians 1:1-11"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 119:105-112"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Kings 1-3"
+    }
+   ]
+  },
+  {
+   "id": "6-15",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 5:1-11"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Philippians 1:12-20"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 119:113-120"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Kings 4-5"
+    }
+   ]
+  },
+  {
+   "id": "6-16",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 5:12-16"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Philippians 1:21-30"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 119:121-128"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Kings 6-7"
+    }
+   ]
+  },
+  {
+   "id": "6-17",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 5:17-26"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Philippians 2:1-11"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 119:129-136"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Kings 8-9"
+    }
+   ]
+  },
+  {
+   "id": "6-18",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 5:27-32"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Philippians 2:12-18"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 119:137-144"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Kings 10-11"
+    }
+   ]
+  },
+  {
+   "id": "6-19",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 5:33-39"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Philippians 2:19-30"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 119:145-152"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Kings 12-13"
+    }
+   ]
+  },
+  {
+   "id": "6-20",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 6:1-16"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Philippians 3:1-9"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 119:153-160"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Kings 14-15"
+    }
+   ]
+  },
+  {
+   "id": "6-21",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 6:17-26"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Philippians 3:10-14"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 119:161-168"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Kings 16-17"
+    }
+   ]
+  },
+  {
+   "id": "6-22",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 6:27-36"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Philippians 3:15-21"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 119:169-176"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Kings 18-19"
+    }
+   ]
+  },
+  {
+   "id": "6-23",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 6:37-42"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Philippians 4:1-7"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 120"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Kings 20-21"
+    }
+   ]
+  },
+  {
+   "id": "6-24",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 6:43-49"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Philippians 4:8-13"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 121"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Kings 22-23"
+    }
+   ]
+  },
+  {
+   "id": "6-25",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 7:1-10"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Philippians 4:14-23"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 122"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Kings 24-25"
+    }
+   ]
+  },
+  {
+   "id": "7-1",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 7:11-17"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Colossians 1:1-14"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 123-124"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Chronicles 1-2"
+    }
+   ]
+  },
+  {
+   "id": "7-2",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 7:18-35"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Colossians 1:15-29"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 125"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Chronicles 3-4"
+    }
+   ]
+  },
+  {
+   "id": "7-3",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 7:36-50"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Colossians 2:1-7"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 126"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Chronicles 5-6"
+    }
+   ]
+  },
+  {
+   "id": "7-4",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 8:1-15"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Colossians 2:8-15"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 127"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Chronicles 7-9"
+    }
+   ]
+  },
+  {
+   "id": "7-5",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 8:16-25"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Colossians 2:16-23"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 128"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Chronicles 10-11"
+    }
+   ]
+  },
+  {
+   "id": "7-6",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 8:26-39"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Colossians 3:1-14"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 129"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Chronicles 12-14"
+    }
+   ]
+  },
+  {
+   "id": "7-7",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 8:40-56"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Colossians 3:15-25"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 130-131"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Chronicles 15-16"
+    }
+   ]
+  },
+  {
+   "id": "7-8",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 9:1-17"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Colossians 4:1-9"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 132"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Chronicles 17-19"
+    }
+   ]
+  },
+  {
+   "id": "7-9",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 9:18-27"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Colossians 4:10-18"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 133-134"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Chronicles 20-22"
+    }
+   ]
+  },
+  {
+   "id": "7-10",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 9:28-36"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Thessalonians 1"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 135"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Chronicles 23-25"
+    }
+   ]
+  },
+  {
+   "id": "7-11",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 9:37-50"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Thessalonians 2:1-9"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 136"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Chronicles 26-28"
+    }
+   ]
+  },
+  {
+   "id": "7-12",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 9:51-62"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Thessalonians 2:10-20"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 137"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "1 Chronicles 29"
+    }
+   ]
+  },
+  {
+   "id": "7-13",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 10:1-16"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Thessalonians 3:1-6"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 138"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Chronicles 1-2"
+    }
+   ]
+  },
+  {
+   "id": "7-14",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 10:17-24"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Thessalonians 3:7-13"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 139"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Chronicles 3-5"
+    }
+   ]
+  },
+  {
+   "id": "7-15",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 10:25-37"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Thessalonians 4:1-10"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 140"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Chronicles 6-7"
+    }
+   ]
+  },
+  {
+   "id": "7-16",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 10:38-42"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Thessalonians 4:11-18"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 141"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Chronicles 8-9"
+    }
+   ]
+  },
+  {
+   "id": "7-17",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 11:1-13"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Thessalonians 5:1-11"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 142"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Chronicles 10-12"
+    }
+   ]
+  },
+  {
+   "id": "7-18",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 11:14-28"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Thessalonians 5:12-28"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 143"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Chronicles 13-16"
+    }
+   ]
+  },
+  {
+   "id": "7-19",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 11:29-36"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Thessalonians 1:1-7"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 144"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Chronicles 17-19"
+    }
+   ]
+  },
+  {
+   "id": "7-20",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 11:37-54"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Thessalonians 1:8-12"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 145"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Chronicles 20-21"
+    }
+   ]
+  },
+  {
+   "id": "7-21",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 12:1-12"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Thessalonians 2:1-12"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 146"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Chronicles 22-24"
+    }
+   ]
+  },
+  {
+   "id": "7-22",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 12:13-21"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Thessalonians 2:13-17"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 147"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Chronicles 25-27"
+    }
+   ]
+  },
+  {
+   "id": "7-23",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 12:22-34"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Thessalonians 3:1-5"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 148"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Chronicles 28-29"
+    }
+   ]
+  },
+  {
+   "id": "7-24",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 12:35-48"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Thessalonians 3:6-13"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 149"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Chronicles 30-33"
+    }
+   ]
+  },
+  {
+   "id": "7-25",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 12:49-59"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Thessalonians 3:14-18"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Psalms 150"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "2 Chronicles 34-36"
+    }
+   ]
+  },
+  {
+   "id": "8-1",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 13:1-9"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Timothy 1:1-11"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 1"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Ezra 1-2"
+    }
+   ]
+  },
+  {
+   "id": "8-2",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 13:10-21"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Timothy 1:12-20"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 2"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Ezra 3"
+    }
+   ]
+  },
+  {
+   "id": "8-3",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 13:22-35"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Timothy 2"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 3"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Ezra 4-5"
+    }
+   ]
+  },
+  {
+   "id": "8-4",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 14:1-14"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Timothy 3:1-10"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 4"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Ezra 6"
+    }
+   ]
+  },
+  {
+   "id": "8-5",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 14:15-24"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Timothy 3:11-16"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 5"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Ezra 7"
+    }
+   ]
+  },
+  {
+   "id": "8-6",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 14:25-35"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Timothy 4"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 6"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Ezra 8"
+    }
+   ]
+  },
+  {
+   "id": "8-7",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 15:1-10"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Timothy 5:1-15"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 7"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Ezra 9"
+    }
+   ]
+  },
+  {
+   "id": "8-8",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 15:11-32"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Timothy 5:16-25"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 8"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Ezra 10"
+    }
+   ]
+  },
+  {
+   "id": "8-9",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 16:1-9"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Timothy 6:1-10"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 9"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Nehemiah 1-2"
+    }
+   ]
+  },
+  {
+   "id": "8-10",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 16:10-18"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Timothy 6:11-21"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 10:1-16"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Nehemiah 3"
+    }
+   ]
+  },
+  {
+   "id": "8-11",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 16:19-31"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Timothy 1:1-7"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 10:17-32"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Nehemiah 4-5"
+    }
+   ]
+  },
+  {
+   "id": "8-12",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 17:1-10"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Timothy 1:8-18"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 11:1-15"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Nehemiah 6"
+    }
+   ]
+  },
+  {
+   "id": "8-13",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 17:11-19"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Timothy 2:1-13"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 11:16-31"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Nehemiah 7"
+    }
+   ]
+  },
+  {
+   "id": "8-14",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 17:20-37"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Timothy 2:14-26"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 12:1-14"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Nehemiah 8"
+    }
+   ]
+  },
+  {
+   "id": "8-15",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 18:1-8"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Timothy 3:1-9"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 12:15-28"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Nehemiah 9"
+    }
+   ]
+  },
+  {
+   "id": "8-16",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 18:9-17"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Timothy 3:10-17"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 13:1-12"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Nehemiah 10"
+    }
+   ]
+  },
+  {
+   "id": "8-17",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 18:18-30"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Timothy 4"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 13:13-25"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Nehemiah 11"
+    }
+   ]
+  },
+  {
+   "id": "8-18",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 18:31-43"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Titus 1:1-9"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 14:1-18"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Nehemiah 12"
+    }
+   ]
+  },
+  {
+   "id": "8-19",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 19:1-10"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Titus 1:10-16"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 14:19-35"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Nehemiah 13"
+    }
+   ]
+  },
+  {
+   "id": "8-20",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 19:11-27"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Titus 2:1-10"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 15:1-17"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Esther 1"
+    }
+   ]
+  },
+  {
+   "id": "8-21",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 19:28-38"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Titus 2:11-15"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 15:18-33"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Esther 2"
+    }
+   ]
+  },
+  {
+   "id": "8-22",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 19:39-48"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Titus 3:1-8"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 16:1-16"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Esther 3-4"
+    }
+   ]
+  },
+  {
+   "id": "8-23",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 20:1-8"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Titus 3:9-15"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 16:17-33"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Esther 5-6"
+    }
+   ]
+  },
+  {
+   "id": "8-24",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 20:9-19"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Philemon 1-11"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 17:1-14"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Esther 7-8"
+    }
+   ]
+  },
+  {
+   "id": "8-25",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 20:20-26"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Philemon 12-25"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 17:15-28"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Esther 9-10"
+    }
+   ]
+  },
+  {
+   "id": "9-1",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 20:27-40"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Hebrews 1:1-9"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 18"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Isaiah 1-2"
+    }
+   ]
+  },
+  {
+   "id": "9-2",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 20:41-47"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Hebrews 1:10-14"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 19:1-14"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Isaiah 3-5"
+    }
+   ]
+  },
+  {
+   "id": "9-3",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 21:1-19"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Hebrews 2:1-9"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 19:15-29"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Isaiah 6-8"
+    }
+   ]
+  },
+  {
+   "id": "9-4",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 21:20-28"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Hebrews 2:10-18"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 20:1-15"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Isaiah 9-10"
+    }
+   ]
+  },
+  {
+   "id": "9-5",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 21:29-38"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Hebrews 3"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 20:16-30"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Isaiah 11-13"
+    }
+   ]
+  },
+  {
+   "id": "9-6",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 22:1-13"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Hebrews 4:1-11"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 21:1-16"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Isaiah 14-16"
+    }
+   ]
+  },
+  {
+   "id": "9-7",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 22:14-23"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Hebrews 4:12-16"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 21:17-31"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Isaiah 17-20"
+    }
+   ]
+  },
+  {
+   "id": "9-8",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 22:24-30"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Hebrews 5"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 22:1-16"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Isaiah 21-23"
+    }
+   ]
+  },
+  {
+   "id": "9-9",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 22:31-38"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Hebrews 6:1-12"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 22:17-29"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Isaiah 24-26"
+    }
+   ]
+  },
+  {
+   "id": "9-10",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 22:39-46"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Hebrews 6:13-20"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 23:1-18"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Isaiah 27-28"
+    }
+   ]
+  },
+  {
+   "id": "9-11",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 22:47-53"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Hebrews 7:1-10"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 23:19-35"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Isaiah 29-30"
+    }
+   ]
+  },
+  {
+   "id": "9-12",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 22:54-62"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Hebrews 7:11-28"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 24:1-22"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Isaiah 31-33"
+    }
+   ]
+  },
+  {
+   "id": "9-13",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 22:63-71"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Hebrews 8:1-6"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 24:23-34"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Isaiah 34-36"
+    }
+   ]
+  },
+  {
+   "id": "9-14",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 23:1-12"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Hebrews 8:7-13"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 25:1-14"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Isaiah 37-39"
+    }
+   ]
+  },
+  {
+   "id": "9-15",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 23:13-25"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Hebrews 9:1-10"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 25:15-28"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Isaiah 40-41"
+    }
+   ]
+  },
+  {
+   "id": "9-16",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 23:26-31"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Hebrews 9:11-28"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 26:1-16"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Isaiah 42-43"
+    }
+   ]
+  },
+  {
+   "id": "9-17",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 23:32-37"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Hebrews 10:1-18"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 26:17-28"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Isaiah 44-45"
+    }
+   ]
+  },
+  {
+   "id": "9-18",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 23:38-43"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Hebrews 10:19-39"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 27:1-14"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Isaiah 46-48"
+    }
+   ]
+  },
+  {
+   "id": "9-19",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 23:44-49"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Hebrews 11:1-16"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 27:15-27"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Isaiah 49-50"
+    }
+   ]
+  },
+  {
+   "id": "9-20",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 23:50-56"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Hebrews 11:17-31"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 28:1-14"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Isaiah 51-53"
+    }
+   ]
+  },
+  {
+   "id": "9-21",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 24:1-12"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Hebrews 11:32-40"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 28:15-28"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Isaiah 54-55"
+    }
+   ]
+  },
+  {
+   "id": "9-22",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 24:13-27"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Hebrews 12:1-13"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 29:1-14"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Isaiah 56-58"
+    }
+   ]
+  },
+  {
+   "id": "9-23",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 24:28-35"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Hebrews 12:14-29"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 29:15-27"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Isaiah 59-61"
+    }
+   ]
+  },
+  {
+   "id": "9-24",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 24:36-44"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Hebrews 13:1-8"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 30"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Isaiah 62-64"
+    }
+   ]
+  },
+  {
+   "id": "9-25",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "Luke 24:45-53"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Hebrews 13:9-25"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Proverbs 31"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Isaiah 65-66"
+    }
+   ]
+  },
+  {
+   "id": "10-1",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 1:1-18"
+    },
+    {
+     "track": "New Testament",
+     "passage": "James 1:1-11"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Ecclesiastes 1"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Jeremiah 1-2"
+    }
+   ]
+  },
+  {
+   "id": "10-2",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 1:19-28"
+    },
+    {
+     "track": "New Testament",
+     "passage": "James 1:12-18"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Ecclesiastes 2:1-16"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Jeremiah 3-4"
+    }
+   ]
+  },
+  {
+   "id": "10-3",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 1:29-34"
+    },
+    {
+     "track": "New Testament",
+     "passage": "James 1:19-27"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Ecclesiastes 2:17-26"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Jeremiah 5-6"
+    }
+   ]
+  },
+  {
+   "id": "10-4",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 1:35-42"
+    },
+    {
+     "track": "New Testament",
+     "passage": "James 2:1-13"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Ecclesiastes 3:1-15"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Jeremiah 7-9"
+    }
+   ]
+  },
+  {
+   "id": "10-5",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 1:43-51"
+    },
+    {
+     "track": "New Testament",
+     "passage": "James 2:14-26"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Ecclesiastes 3:16-22"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Jeremiah 10-11"
+    }
+   ]
+  },
+  {
+   "id": "10-6",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 2:1-11"
+    },
+    {
+     "track": "New Testament",
+     "passage": "James 3:1-12"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Ecclesiastes 4"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Jeremiah 12-13"
+    }
+   ]
+  },
+  {
+   "id": "10-7",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 2:12-25"
+    },
+    {
+     "track": "New Testament",
+     "passage": "James 3:13-18"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Ecclesiastes 5"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Jeremiah 14-15"
+    }
+   ]
+  },
+  {
+   "id": "10-8",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 3:1-15"
+    },
+    {
+     "track": "New Testament",
+     "passage": "James 4:1-10"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Ecclesiastes 6"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Jeremiah 16-18"
+    }
+   ]
+  },
+  {
+   "id": "10-9",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 3:16-21"
+    },
+    {
+     "track": "New Testament",
+     "passage": "James 4:11-17"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Ecclesiastes 7:1-14"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Jeremiah 19-22"
+    }
+   ]
+  },
+  {
+   "id": "10-10",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 3:22-36"
+    },
+    {
+     "track": "New Testament",
+     "passage": "James 5:1-6"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Ecclesiastes 7:15-29"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Jeremiah 23-25"
+    }
+   ]
+  },
+  {
+   "id": "10-11",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 4:1-14"
+    },
+    {
+     "track": "New Testament",
+     "passage": "James 5:7-12"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Ecclesiastes 8"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Jeremiah 26-29"
+    }
+   ]
+  },
+  {
+   "id": "10-12",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 4:15-26"
+    },
+    {
+     "track": "New Testament",
+     "passage": "James 5:13-20"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Ecclesiastes 9"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Jeremiah 30-31"
+    }
+   ]
+  },
+  {
+   "id": "10-13",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 4:27-42"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Peter 1:1-9"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Ecclesiastes 10"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Jeremiah 32-34"
+    }
+   ]
+  },
+  {
+   "id": "10-14",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 4:43-54"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Peter 1:10-16"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Ecclesiastes 11"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Jeremiah 35-38"
+    }
+   ]
+  },
+  {
+   "id": "10-15",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 5:1-15"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Peter 1:17-25"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Ecclesiastes 12"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Jeremiah 39-43"
+    }
+   ]
+  },
+  {
+   "id": "10-16",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 5:16-30"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Peter 2:1-8"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Song of Songs 1"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Jeremiah 44-46"
+    }
+   ]
+  },
+  {
+   "id": "10-17",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 5:31-47"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Peter 2:9-17"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Song of Songs 2"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Jeremiah 47-48"
+    }
+   ]
+  },
+  {
+   "id": "10-18",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 6:1-15"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Peter 2:18-25"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Song of Songs 3"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Jeremiah 49"
+    }
+   ]
+  },
+  {
+   "id": "10-19",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 6:16-24"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Peter 3:1-7"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Song of Songs 4:1-7"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Jeremiah 50"
+    }
+   ]
+  },
+  {
+   "id": "10-20",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 6:25-40"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Peter 3:8-12"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Song of Songs 4:8-16"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Jeremiah 51"
+    }
+   ]
+  },
+  {
+   "id": "10-21",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 6:41-59"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Peter 3:13-22"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Song of Songs 5"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Jeremiah 52"
+    }
+   ]
+  },
+  {
+   "id": "10-22",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 6:60-71"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Peter 4:1-11"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Song of Songs 6"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Lamentations 1"
+    }
+   ]
+  },
+  {
+   "id": "10-23",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 7:1-13"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Peter 4:12-19"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Song of Songs 7"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Lamentations 2"
+    }
+   ]
+  },
+  {
+   "id": "10-24",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 7:14-24"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Peter 5:1-7"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Song of Songs 8:1-7"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Lamentations 3"
+    }
+   ]
+  },
+  {
+   "id": "10-25",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 7:25-36"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 Peter 5:8-14"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Song of Songs 8:8-14"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Lamentations 4-5"
+    }
+   ]
+  },
+  {
+   "id": "11-1",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 7:37-44"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Peter 1:1-11"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 1"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Ezekiel 1-3"
+    }
+   ]
+  },
+  {
+   "id": "11-2",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 7:45-53"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Peter 1:12-21"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 2"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Ezekiel 4-8"
+    }
+   ]
+  },
+  {
+   "id": "11-3",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 8:1-11"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Peter 2:1-9"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 3"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Ezekiel 9-12"
+    }
+   ]
+  },
+  {
+   "id": "11-4",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 8:12-20"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Peter 2:10-16"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 4"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Ezekiel 13-15"
+    }
+   ]
+  },
+  {
+   "id": "11-5",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 8:21-30"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Peter 2:17-22"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 5"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Ezekiel 16"
+    }
+   ]
+  },
+  {
+   "id": "11-6",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 8:31-47"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Peter 3:1-9"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 6"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Ezekiel 17-19"
+    }
+   ]
+  },
+  {
+   "id": "11-7",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 8:48-59"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 Peter 3:10-18"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 7"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Ezekiel 20-21"
+    }
+   ]
+  },
+  {
+   "id": "11-8",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 9:1-12"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 John 1:1-4"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 8"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Ezekiel 22-23"
+    }
+   ]
+  },
+  {
+   "id": "11-9",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 9:13-25"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 John 1:5-10"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 9:1-20"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Ezekiel 24-26"
+    }
+   ]
+  },
+  {
+   "id": "11-10",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 9:26-41"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 John 2:1-11"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 9:21-35"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Ezekiel 27-28"
+    }
+   ]
+  },
+  {
+   "id": "11-11",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 10:1-10"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 John 2:12-17"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 10"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Ezekiel 29-30"
+    }
+   ]
+  },
+  {
+   "id": "11-12",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 10:11-21"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 John 2:18-23"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 11"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Ezekiel 31-32"
+    }
+   ]
+  },
+  {
+   "id": "11-13",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 10:22-42"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 John 2:24-29"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 12"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Ezekiel 33-34"
+    }
+   ]
+  },
+  {
+   "id": "11-14",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 11:1-16"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 John 3:1-10"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 13"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Ezekiel 35-37"
+    }
+   ]
+  },
+  {
+   "id": "11-15",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 11:17-37"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 John 3:11-18"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 14"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Ezekiel 38-39"
+    }
+   ]
+  },
+  {
+   "id": "11-16",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 11:38-44"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 John 3:19-24"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 15:1-16"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Ezekiel 40-41"
+    }
+   ]
+  },
+  {
+   "id": "11-17",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 11:45-57"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 John 4:1-6"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 15:17-35"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Ezekiel 42-44"
+    }
+   ]
+  },
+  {
+   "id": "11-18",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 12:1-11"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 John 4:7-21"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 16"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Ezekiel 45-47"
+    }
+   ]
+  },
+  {
+   "id": "11-19",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 12:12-19"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 John 5:1-12"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 17"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Ezekiel 48"
+    }
+   ]
+  },
+  {
+   "id": "11-20",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 12:20-36"
+    },
+    {
+     "track": "New Testament",
+     "passage": "1 John 5:13-21"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 18"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Daniel 1-2"
+    }
+   ]
+  },
+  {
+   "id": "11-21",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 12:37-50"
+    },
+    {
+     "track": "New Testament",
+     "passage": "2 John 1-13"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 19"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Daniel 3-4"
+    }
+   ]
+  },
+  {
+   "id": "11-22",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 13:1-11"
+    },
+    {
+     "track": "New Testament",
+     "passage": "3 John 1-14"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 20"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Daniel 5-6"
+    }
+   ]
+  },
+  {
+   "id": "11-23",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 13:12-17"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Jude 1-7"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 21:1-21"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Daniel 7-8"
+    }
+   ]
+  },
+  {
+   "id": "11-24",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 13:18-30"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Jude 8-16"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 21:22-34"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Daniel 9"
+    }
+   ]
+  },
+  {
+   "id": "11-25",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 13:31-38"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Jude 17-25"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 22"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Daniel 10-12"
+    }
+   ]
+  },
+  {
+   "id": "12-1",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 14:1-14"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Revelation 1:1-8"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 23"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Hosea 1-3"
+    }
+   ]
+  },
+  {
+   "id": "12-2",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 14:15-21"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Revelation 1:9-20"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 24"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Hosea 4-6"
+    }
+   ]
+  },
+  {
+   "id": "12-3",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 14:22-31"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Revelation 2:1-17"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 25-26"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Hosea 7-8"
+    }
+   ]
+  },
+  {
+   "id": "12-4",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 15:1-8"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Revelation 2:18-29"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 27"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Hosea 9-12"
+    }
+   ]
+  },
+  {
+   "id": "12-5",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 15:9-17"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Revelation 3:1-13"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 28"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Hosea 13-14"
+    }
+   ]
+  },
+  {
+   "id": "12-6",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 15:18-27"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Revelation 3:14-22"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 29"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Joel 1"
+    }
+   ]
+  },
+  {
+   "id": "12-7",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 16:1-11"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Revelation 4"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 30"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Joel 2-3"
+    }
+   ]
+  },
+  {
+   "id": "12-8",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 16:12-24"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Revelation 5"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 31:1-23"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Amos 1-2"
+    }
+   ]
+  },
+  {
+   "id": "12-9",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 16:25-33"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Revelation 6"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 31:24-40"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Amos 3-4"
+    }
+   ]
+  },
+  {
+   "id": "12-10",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 17:1-5"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Revelation 7"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 32"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Amos 5-6"
+    }
+   ]
+  },
+  {
+   "id": "12-11",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 17:6-19"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Revelation 8"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 33:1-11"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Amos 7-9"
+    }
+   ]
+  },
+  {
+   "id": "12-12",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 17:20-26"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Revelation 9"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 33:12-33"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Obadiah 1-21"
+    }
+   ]
+  },
+  {
+   "id": "12-13",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 18:1-18"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Revelation 10"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 34:1-20"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Jonah 1-4"
+    }
+   ]
+  },
+  {
+   "id": "12-14",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 18:19-27"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Revelation 11"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 34:21-37"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Micah 1-3"
+    }
+   ]
+  },
+  {
+   "id": "12-15",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 18:28-40"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Revelation 12"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 35"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Micah 4-5"
+    }
+   ]
+  },
+  {
+   "id": "12-16",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 19:1-16"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Revelation 13"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 36:1-15"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Micah 6-7"
+    }
+   ]
+  },
+  {
+   "id": "12-17",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 19:17-27"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Revelation 14"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 36:16-33"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Nahum 1-3"
+    }
+   ]
+  },
+  {
+   "id": "12-18",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 19:28-37"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Revelation 15"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 37"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Habakkuk 1-3"
+    }
+   ]
+  },
+  {
+   "id": "12-19",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 19:38-42"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Revelation 16"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 38:1-21"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Zephaniah 1-2"
+    }
+   ]
+  },
+  {
+   "id": "12-20",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 20:1-9"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Revelation 17"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 38:22-41"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Zephaniah 3"
+    }
+   ]
+  },
+  {
+   "id": "12-21",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 20:10-18"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Revelation 18"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 39"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Haggai 1-2"
+    }
+   ]
+  },
+  {
+   "id": "12-22",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 20:19-23"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Revelation 19"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 40"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Zechariah 1-5"
+    }
+   ]
+  },
+  {
+   "id": "12-23",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 20:24-31"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Revelation 20"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 41:1-11"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Zechariah 6-9"
+    }
+   ]
+  },
+  {
+   "id": "12-24",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 21:1-14"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Revelation 21"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 41:12-34"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Zechariah 10-14"
+    }
+   ]
+  },
+  {
+   "id": "12-25",
+   "readings": [
+    {
+     "track": "Gospels",
+     "passage": "John 21:15-25"
+    },
+    {
+     "track": "New Testament",
+     "passage": "Revelation 22"
+    },
+    {
+     "track": "Psalms and Wisdom",
+     "passage": "Job 42"
+    },
+    {
+     "track": "Old Testament",
+     "passage": "Malachi 1-4"
+    }
+   ]
+  }
+ ]
+}

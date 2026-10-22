@@ -1,0 +1,65 @@
+---
+import Base from "../layouts/Base.astro";
+import { readFile } from "../lib/github";
+import { loadState, parseFeedback, planLabel } from "../lib/show";
+import { DEMO_FEEDBACK, DEMO_NOTICE, DEMO_STATE, isDemo } from "../lib/demo";
+
+const env = Astro.locals.runtime.env;
+const demo = isDemo(env);
+const [state, feedbackFile] = demo
+  ? [DEMO_STATE, null]
+  : await Promise.all([loadState(env), readFile(env, `shows/${env.SHOW}/feedback.jsonl`).catch(() => null)]);
+const feedback = demo ? DEMO_FEEDBACK : parseFeedback(feedbackFile?.text ?? null);
+const latestFor = (date: string) => feedback.filter((f) => f.episode_date === date).at(-1);
+const episodes = (state?.episodes ?? []).slice(0, 10);
+const feedUrl = `${env.PAGES_BASE}/${env.SHOW}/feed.xml`;
+const saved = Astro.url.searchParams.get("saved");
+const failed = Astro.url.searchParams.get("error");
+const demoSent = Astro.url.searchParams.get("demo");
+---
+<Base title="Recent episodes" eyebrow="Your daily reading companion"
+  lede={state ? `Next up: ${planLabel(state.next_plan_day)}.` : "Your first episode arrives the morning after the show is switched on."}>
+  {saved && <p class="notice">Thanks. Tomorrow's episode will take that into account.</p>}
+  {failed && <p class="notice error">That didn't save. Please try again in a minute.</p>}
+  {demoSent && <p class="notice">{DEMO_NOTICE}</p>}
+
+  {episodes.length === 0 && (
+    <div class="card">
+      <h2>Nothing to review yet</h2>
+      <p class="muted">Once episodes arrive, each one shows up here so you can say what worked.</p>
+    </div>
+  )}
+
+  {episodes.map((ep) => {
+    const said = latestFor(ep.date);
+    return (
+      <div class="card" id={`ep-${ep.date}`}>
+        <p class="meta">{new Date(ep.date + "T12:00:00").toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" })}</p>
+        <h2>{ep.title}</h2>
+        {said && (
+          <p class="said">
+            You said: {said.rating === "up" ? "liked it" : said.rating === "down" ? "not for me" : "a note"}
+            {said.note && <>, “{said.note}”</>}
+          </p>
+        )}
+        <form method="post" action="/api/feedback">
+          <input type="hidden" name="episode_date" value={ep.date} />
+          <input type="hidden" name="episode_title" value={ep.title} />
+          <div class="thumbs" role="radiogroup" aria-label="How was it?">
+            <label><input type="radio" name="rating" value="up" /> Loved it</label>
+            <label><input type="radio" name="rating" value="down" /> Not for me</label>
+          </div>
+          <label for={`note-${ep.date}`}>Anything to change, keep, or ask about?</label>
+          <textarea id={`note-${ep.date}`} name="note" maxlength="2000"></textarea>
+          <button class="arrow">Send feedback</button>
+        </form>
+      </div>
+    );
+  })}
+
+  <div class="card">
+    <h2>Listen in your podcast app</h2>
+    <p class="muted">Follow this link as a show by URL. In Apple Podcasts: Library, then the ⋯ menu, then Follow a Show by URL.</p>
+    <code class="feed">{feedUrl}</code>
+  </div>
+</Base>

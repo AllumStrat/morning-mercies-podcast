@@ -1,0 +1,4 @@
+# To move the podcast to a different day of the plan, put the plan day on the
+# last line below, in the form MONTH-DAY (for example 10-14 means Month 10, Day 14),
+# and commit. The next run jumps there once, then continues forward from it.
+# Changing it to a new value later jumps again. Leave it unchanged to keep going.

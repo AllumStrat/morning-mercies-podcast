@@ -1,0 +1,4 @@
+# Copy to .dev.vars for `npm run dev`. Never commit .dev.vars.
+SITE_PASSWORD=change-me
+SESSION_SECRET=any-long-random-string
+GITHUB_TOKEN=github_pat_...

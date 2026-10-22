@@ -1,0 +1,27 @@
+---
+import Base from "../layouts/Base.astro";
+import { COOKIE, newSession, passwordMatches } from "../lib/auth";
+
+const env = Astro.locals.runtime.env;
+let failed = false;
+if (Astro.request.method === "POST") {
+  const form = await Astro.request.formData();
+  if (await passwordMatches(String(form.get("password") ?? ""), env.SITE_PASSWORD, env.SESSION_SECRET)) {
+    const { value, maxAge } = await newSession(env.SESSION_SECRET);
+    Astro.cookies.set(COOKIE, value, { httpOnly: true, secure: true, sameSite: "lax", path: "/", maxAge });
+    return Astro.redirect("/");
+  }
+  await new Promise((r) => setTimeout(r, 1000)); // slow down guessing
+  failed = true;
+}
+---
+<Base title="Good morning, Grace" eyebrow="Morning Mercies" lede="Sign in to send feedback and change how your show sounds." nav={false}>
+  <div class="card">
+    {failed && <p class="notice error">That password didn't match. Try again.</p>}
+    <form method="post">
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" autocomplete="current-password" required autofocus />
+      <button class="arrow">Sign in</button>
+    </form>
+  </div>
+</Base>

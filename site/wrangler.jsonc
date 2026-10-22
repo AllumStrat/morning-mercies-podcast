@@ -1,0 +1,24 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "morning-mercies",
+  "main": "./dist/_worker.js/index.js",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": { "binding": "ASSETS", "directory": "./dist" },
+  "observability": { "enabled": true },
+
+  // Turn this on once devbysalt.com's DNS is on Cloudflare (see README.md).
+  // "routes": [{ "pattern": "morningmercies.devbysalt.com", "custom_domain": true }],
+
+  "vars": {
+    "SHOW": "grace",
+    "SHOW_TITLE": "Morning Mercies",
+    "GITHUB_REPO": "AllumStrat/morning-mercies-podcast",
+    "GITHUB_BRANCH": "main",
+    "PAGES_BASE": "https://allumstrat.github.io/morning-mercies-podcast"
+  }
+  // Secrets, set with `npx wrangler secret put NAME` (never committed):
+  //   SITE_PASSWORD   what Grace types to get in
+  //   SESSION_SECRET  any long random string; signs the sign-in cookie
+  //   GITHUB_TOKEN    fine-grained token, Contents read and write, this repo only
+}

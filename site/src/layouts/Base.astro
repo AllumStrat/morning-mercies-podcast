@@ -1,0 +1,120 @@
+---
+// Look modeled on readily.ai's layout: a sky-and-hill hero with an eyebrow, a large headline and a
+// short lede, then clean rounded cards and pill buttons on a calm page.
+interface Props { title: string; eyebrow?: string; lede?: string; nav?: boolean }
+const { title, eyebrow, lede, nav = true } = Astro.props;
+const show = Astro.locals.runtime.env.SHOW_TITLE;
+const path = Astro.url.pathname;
+const demo = Astro.locals.runtime.env.DEMO === "true";
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <title>{title} · {show}</title>
+  </head>
+  <body>
+    {demo && <p class="preview-bar">Preview with sample episodes. Nothing you send here is saved.</p>}
+    <section class="hero">
+      <header class="bar">
+        <a class="brand" href="/"><span class="sun" aria-hidden="true"></span>{show}</a>
+        {nav && (
+          <nav>
+            <a href="/" aria-current={path === "/" ? "page" : undefined}>Episodes</a>
+            <a href="/settings" aria-current={path === "/settings" ? "page" : undefined}>Settings</a>
+            <form method="post" action="/logout"><button class="ghost">Sign out</button></form>
+          </nav>
+        )}
+      </header>
+      <div class="hero-copy">
+        {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+        <h1>{title}</h1>
+        {lede && <p class="lede">{lede}</p>}
+      </div>
+      <svg class="hills" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
+        <path class="hill-back" d="M0 110 C 240 40 420 60 640 95 S 1080 30 1440 80 L1440 160 L0 160 Z" />
+        <path class="hill-front" d="M0 135 C 300 85 560 120 820 125 S 1220 90 1440 115 L1440 160 L0 160 Z" />
+      </svg>
+    </section>
+    <main><slot /></main>
+    <footer>Made for Grace · Changes apply from the next morning's episode</footer>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --page: #f7f6f2; --card: #ffffff; --ink: #14212f; --muted: #5d6874; --line: #e4e2da;
+    --sky-top: #bcd7ee; --sky-mid: #e6eef3; --sky-low: #f6e3cc; --sun: #f2b36b;
+    --hill-back: #b9cdb0; --hill-front: #8fae86;
+    --button: #14212f; --button-ink: #ffffff; --good: #2f6b46; --bad: #a33a3a;
+    --shadow: 0 1px 2px rgba(20, 33, 47, 0.04), 0 8px 24px rgba(20, 33, 47, 0.06);
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --page: #0f1720; --card: #17212c; --ink: #eef2f5; --muted: #9eabb7; --line: #26323f;
+      --sky-top: #0b1726; --sky-mid: #1a2a3d; --sky-low: #3b3445; --sun: #e6a560;
+      --hill-back: #22332b; --hill-front: #1a2822;
+      --button: #f1e6d6; --button-ink: #0f1720; --good: #7cc596; --bad: #ef9a9a;
+      --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.25);
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink); font: 16px/1.6 Inter, system-ui, sans-serif; }
+
+  .hero { position: relative; background: linear-gradient(180deg, var(--sky-top) 0%, var(--sky-mid) 55%, var(--sky-low) 100%);
+    padding-bottom: 96px; overflow: hidden; }
+  .bar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between;
+    max-width: 760px; margin: 0 auto; padding: 20px 16px; }
+  .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none;
+    font: 400 1.5rem/1 "Instrument Serif", Georgia, serif; }
+  .sun { width: 18px; height: 18px; border-radius: 50%; background: var(--sun); box-shadow: 0 0 0 6px color-mix(in srgb, var(--sun) 25%, transparent); }
+  nav { display: flex; gap: 6px; align-items: center; font-size: 0.92rem; font-weight: 500; }
+  nav a { color: var(--muted); text-decoration: none; padding: 6px 12px; border-radius: 999px; }
+  nav a[aria-current="page"] { color: var(--ink); background: color-mix(in srgb, var(--card) 70%, transparent); }
+  nav form { margin: 0; }
+  .hero-copy { max-width: 760px; margin: 0 auto; padding: 36px 16px 0; position: relative; z-index: 1; }
+  .eyebrow { margin: 0 0 10px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+  h1 { margin: 0; font: 400 clamp(2.3rem, 7vw, 3.4rem)/1.05 "Instrument Serif", Georgia, serif; letter-spacing: -0.01em; }
+  .lede { margin: 14px 0 0; max-width: 34rem; font-size: 1.05rem; color: var(--muted); }
+  .hills { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 110px; }
+  .hill-back { fill: var(--hill-back); } .hill-front { fill: var(--hill-front); }
+
+  main { max-width: 760px; margin: -40px auto 0; padding: 0 16px 48px; position: relative; }
+  footer { text-align: center; color: var(--muted); font-size: 0.85rem; padding: 0 16px 40px; }
+  h2 { margin: 0 0 4px; font: 400 1.6rem/1.15 "Instrument Serif", Georgia, serif; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 22px; margin: 0 0 16px; box-shadow: var(--shadow); }
+  .muted { color: var(--muted); font-size: 0.92rem; margin: 0; }
+  .meta { color: var(--muted); font-size: 0.85rem; font-weight: 500; margin: 0 0 6px; }
+  .notice { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--good);
+    border-radius: 12px; padding: 12px 16px; margin: 0 0 16px; box-shadow: var(--shadow); }
+  .preview-bar { margin: 0; padding: 8px 16px; text-align: center; font-size: 14px;
+    background: var(--ink); color: var(--page); }
+  .notice.error { border-left-color: var(--bad); }
+  label { display: block; font-size: 0.88rem; font-weight: 500; margin: 18px 0 6px; }
+  input, select, textarea { width: 100%; font: inherit; color: var(--ink); background: var(--page);
+    border: 1px solid var(--line); border-radius: 12px; padding: 11px 12px; }
+  input[type="range"] { padding: 0; accent-color: var(--button); background: none; border: 0; }
+  textarea { min-height: 96px; resize: vertical; }
+  :focus-visible { outline: 2px solid var(--sun); outline-offset: 2px; }
+  button { font: 600 0.95rem Inter, system-ui, sans-serif; background: var(--button); color: var(--button-ink);
+    border: 0; border-radius: 999px; padding: 12px 22px; cursor: pointer; margin-top: 18px; }
+  button.arrow::after { content: " →"; }
+  button.ghost { background: none; color: var(--muted); padding: 6px 12px; margin: 0; font-weight: 500; }
+  .thumbs { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+  .thumbs label { margin: 0; display: flex; gap: 8px; align-items: center; border: 1px solid var(--line);
+    border-radius: 999px; padding: 8px 16px; cursor: pointer; font-weight: 500; }
+  .thumbs label:has(input:checked) { border-color: var(--ink); background: var(--page); }
+  .thumbs input { width: auto; margin: 0; accent-color: var(--button); }
+  .said { margin: 12px 0 0; padding: 10px 14px; border-radius: 12px; background: var(--page); font-size: 0.92rem; color: var(--muted); }
+  .feed { display: block; margin-top: 10px; padding: 10px 12px; border-radius: 12px; background: var(--page);
+    font: 0.82rem ui-monospace, Menlo, monospace; word-break: break-all; user-select: all; }
+  .hint { color: var(--muted); font-size: 0.85rem; margin: 6px 0 0; }
+</style>

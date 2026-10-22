@@ -1,0 +1,12 @@
+{
+  "show_title": "Morning Mercies",
+  "show_subtitle": "A daily companion to the Navigators Bible Reading Plan",
+  "show_description": "A private daily podcast for Grace, walking through the Navigators Bible Reading Plan at Grace's own pace.",
+  "author": "Morning Mercies",
+  "owner_email": "",
+  "itunes_block": true,
+  "listener_name": "Grace",
+  "voice": "af_heart",
+  "voice_speed": 1.0,
+  "start_plan_day": null
+}
