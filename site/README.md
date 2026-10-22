@@ -13,7 +13,15 @@ in this repo:
 The 4am run reads both from its checkout, and `podcast.py next --show grace` passes them to the
 writer in `work/today.json`. Nothing else has to change for a save to take effect the next morning.
 
-## Deploy (one time)
+## Deploys
+
+The Worker `morning-mercies` on Jacob's Cloudflare account is connected to this repo with
+Workers Builds: every push to `main` that touches `site/` builds and deploys it. It's live at
+https://morning-mercies.jacob-274.workers.dev. `SESSION_SECRET` is already set. Add
+`SITE_PASSWORD` and `GITHUB_TOKEN` in the Cloudflare dashboard (Workers & Pages, morning-mercies,
+Settings, Variables and Secrets, type Secret). Until `SITE_PASSWORD` exists, no password works.
+
+## Deploy by hand (only if Workers Builds is ever disconnected)
 
 1. Create a fine-grained GitHub token: github.com, Settings, Developer settings, Fine-grained
    tokens. Resource owner AllumStrat, only the `morning-mercies-podcast` repository, permission
