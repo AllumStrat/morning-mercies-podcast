@@ -821,7 +821,10 @@ def cmd_feed(args):
     state = load_state(c)
     if state is None:
         sys.exit("No series state found.")
-    c.commit({PREFIX + "feed.xml": build_feed(state)}, "Rebuild feed")
+    files = {PREFIX + "feed.xml": build_feed(state)}
+    if SHOW and (ROOT / "shows" / SHOW / "cover.png").exists():
+        files[PREFIX + "cover.png"] = cover_bytes()
+    c.commit(files, "Rebuild feed")
     print(pages_url(PREFIX + "feed.xml"))
 
 

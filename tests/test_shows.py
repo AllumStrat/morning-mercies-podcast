@@ -151,7 +151,9 @@ class ShowsTest(unittest.TestCase):
         self.assertNotIn("feed.xml", self.gh.files)          # the original show's feed is untouched
         self.assertNotIn("state/series.json", self.gh.files)
         feed = self.gh.get_text("grace/feed.xml")
-        self.assertIn("<itunes:block>Yes</itunes:block>", feed)
+        # Listed on Apple Podcasts: no block, and an owner email Apple can verify.
+        self.assertNotIn("<itunes:block>", feed)
+        self.assertIn("<itunes:email>jacob@allumstrategies.com</itunes:email>", feed)
         self.assertIn(f"releases/{tag}/grace-{DATE}.mp3", feed)
         self.assertEqual(self.gh.deleted_branches, [staged["branch"]])
 
