@@ -34,7 +34,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
           SOURCE_BRANCH: ${{ github.ref_name }}
-      # Podcast apps need the audio served as audio/mpeg with byte ranges. Wait for Pages to
+      # Podcast apps need the audio served inline as MP3 (Pages sends audio/mp3) with byte ranges. Wait for Pages to
       # publish the new feed, then print what the newest episode's audio returns.
       - name: Check the newest episode's audio
         run: |
@@ -49,5 +49,5 @@ jobs:
             echo "== $show: $url"
             curl -sSI "$url" | grep -iE '^(HTTP|content-type|content-length|accept-ranges)'
             curl -sS -o /dev/null -D - -r 0-99 "$url" | grep -iE '^(HTTP|content-type|content-range)'
-            curl -sSI "$url" | grep -qi '^content-type: audio/mpeg' || { echo "::error::$show audio is not served as audio/mpeg"; exit 1; }
+            curl -sSI "$url" | grep -qiE '^content-type: audio/(mpeg|mp3)' || { echo "::error::$show audio is not served as MP3 audio"; exit 1; }
           done
