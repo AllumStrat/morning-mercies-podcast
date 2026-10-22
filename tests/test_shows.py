@@ -50,7 +50,7 @@ class FakeGitHub:
 
     def upload_episode(self, tag, title, body, mp3_path):
         self.releases[tag] = title
-        return len(self.releases), f"https://example.invalid/releases/{tag}/{Path(mp3_path).name}"
+        return len(self.releases), f"https://github.com/o/r/releases/download/{tag}/{Path(mp3_path).name}"
 
     def release_exists(self, tag):
         return tag in self.releases
@@ -154,7 +154,9 @@ class ShowsTest(unittest.TestCase):
         # Listed on Apple Podcasts: no block, and an owner email Apple can verify.
         self.assertNotIn("<itunes:block>", feed)
         self.assertIn("<itunes:email>jacob@allumstrategies.com</itunes:email>", feed)
-        self.assertIn(f"releases/{tag}/grace-{DATE}.mp3", feed)
+        # Audio goes through the settings site, which serves it as audio/mpeg for Apple.
+        self.assertIn(f'url="https://morningmercies.devbysalt.com/audio/{tag}/grace-{DATE}.mp3"', feed)
+        self.assertNotIn("releases/download", feed)
         self.assertEqual(self.gh.deleted_branches, [staged["branch"]])
 
         # The next day continues from the saved state and reads yesterday's transcript path.
@@ -232,7 +234,7 @@ class ShowsTest(unittest.TestCase):
         self.assertNotIn(old["tag"], self.gh.releases)
         self.assertIn(ep["tag"], self.gh.releases)
         feed = self.gh.get_text("grace/feed.xml")
-        self.assertIn(ep["mp3_url"], feed)
+        self.assertIn(f"/audio/{ep['tag']}/", feed)
         self.assertIn("Grace&#x27;s mornings." if "&#x27;" in feed else "Grace's mornings.", feed)
         self.assertEqual(mod.CONFIG["retention_days"], 30)
         self.assertIn("claude/remake-grace-1761000000", self.gh.deleted_branches)
@@ -256,6 +258,7 @@ class ShowsTest(unittest.TestCase):
         self.publish_branch(staged["branch"])
         self.assertIn(f"ep-{DATE}", self.gh.releases)
         self.assertIn("feed.xml", self.gh.files)
+        self.assertIn(f"releases/download/ep-{DATE}/", self.gh.get_text("feed.xml"))  # no audio_base, unchanged
         self.assertIn(f"transcripts/ep-{DATE}.txt", self.gh.files)
         self.assertFalse(any(p.startswith("grace/") for p in self.gh.files))
 

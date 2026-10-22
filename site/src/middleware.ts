@@ -1,10 +1,10 @@
 import { defineMiddleware } from "astro:middleware";
 import { COOKIE, validSession } from "./lib/auth";
 
-// Everything except the sign-in page needs Grace's password cookie.
+// Everything except the sign-in page and episode audio needs Grace's password cookie.
 export const onRequest = defineMiddleware(async (context, next) => {
   const { pathname } = context.url;
-  if (pathname === "/login" || pathname.startsWith("/_astro/") || pathname === "/favicon.svg") return next();
+  if (pathname === "/login" || pathname.startsWith("/_astro/") || pathname === "/favicon.svg" || pathname.startsWith("/audio/")) return next();
   const env = context.locals.runtime.env;
   if (await validSession(context.cookies.get(COOKIE)?.value, env.SESSION_SECRET)) {
     const response = await next();

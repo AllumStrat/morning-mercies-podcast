@@ -774,6 +774,15 @@ def cdata(text):
     return "<![CDATA[" + text.replace("]]>", "]] >") + "]]>"
 
 
+def enclosure_url(ep):
+    """Where podcast apps fetch the audio. A show with audio_base gets it through the settings
+    site's /audio/ route, which serves GitHub's release file as audio/mpeg so Apple can play it."""
+    base, marker = CONFIG.get("audio_base"), "/releases/download/"
+    if base and marker in ep["mp3_url"]:
+        return base.rstrip("/") + "/audio/" + ep["mp3_url"].split(marker, 1)[1]
+    return ep["mp3_url"]
+
+
 def build_feed(state):
     cfg = CONFIG
     items = []
@@ -784,7 +793,7 @@ def build_feed(state):
       <title>{escape(ep['title'])}</title>
       <description>{cdata(ep['description'])}</description>
       <itunes:summary>{cdata(ep['description'])}</itunes:summary>
-      <enclosure url="{escape(ep['mp3_url'])}" length="{ep['bytes']}" type="audio/mpeg"/>
+      <enclosure url="{escape(enclosure_url(ep))}" length="{ep['bytes']}" type="audio/mpeg"/>
       <guid isPermaLink="false">{ep['guid']}</guid>
       <pubDate>{ep['published']}</pubDate>
       <itunes:duration>{fmt_duration(ep['duration'])}</itunes:duration>

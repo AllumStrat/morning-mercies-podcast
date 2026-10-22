@@ -5,6 +5,7 @@
   "author": "Morning Mercies",
   "owner_email": "jacob@allumstrategies.com",
   "itunes_block": false,
+  "audio_base": "https://morningmercies.devbysalt.com",
   "listener_name": "Grace",
   "voice": "af_heart",
   "voice_speed": 1.0,
