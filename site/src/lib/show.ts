@@ -9,6 +9,7 @@ export type Settings = {
   focus: string;
   show_description: string;
   retention_days: number;
+  skip_tracks: string[];
 };
 export type Feedback = { at: string; episode_date: string; episode_title: string; rating: "up" | "down" | ""; note: string };
 
@@ -28,25 +29,29 @@ export const VOICES: [string, string][] = [
 
 // Must match LENGTHS in scripts/podcast.py.
 export const LENGTHS: [string, string][] = [
-  ["short", "Short, about 15 minutes"],
-  ["medium", "Medium, about 22 minutes"],
-  ["full", "Full, about 30 minutes"],
+  ["short", "Short, about 13 minutes"],
+  ["medium", "Medium, about 20 minutes"],
+  ["full", "Full, about 28 minutes"],
 ];
+
+// The plan's four daily readings. Grace's show leaves out the Old Testament.
+export const TRACKS: string[] = [...new Set(plan.days.flatMap((d) => d.readings.map((r) => r.track)))];
 
 export const PLAN_DAYS = (plan.days as { id: string; readings: { track: string; passage: string }[] }[]).map((d) => {
   const [month, day] = d.id.split("-");
-  const ot = d.readings.find((r) => r.track === "Old Testament")?.passage ?? d.readings[0].passage;
-  return { id: d.id, label: `Month ${month}, Day ${day}: ${ot}` };
+  const gospel = d.readings.find((r) => r.track === "Gospels")?.passage ?? d.readings[0].passage;
+  return { id: d.id, label: `Month ${month}, Day ${day}: ${gospel}` };
 });
 
 export const DEFAULT_SETTINGS: Settings = {
   voice: "af_heart",
   voice_speed: 1.0,
-  length: "full",
+  length: "medium",
   jump_to: "",
   focus: "",
   show_description: "",
   retention_days: 60,
+  skip_tracks: ["Old Testament"],
 };
 
 // Must match the clamps in set_show() in scripts/podcast.py.
@@ -58,6 +63,8 @@ export function cleanSettings(form: FormData, previous: Settings): Settings {
   const jump = String(form.get("jump_to") ?? "");
   const speed = Number(form.get("voice_speed"));
   const keep = Number(form.get("retention_days"));
+  const covered = form.getAll("tracks").map(String);
+  const skip = TRACKS.filter((t) => !covered.includes(t));
   return {
     voice: VOICES.some(([id]) => id === voice) ? voice : previous.voice,
     voice_speed: Number.isFinite(speed) ? Math.min(1.3, Math.max(0.8, Math.round(speed * 20) / 20)) : previous.voice_speed,
@@ -68,6 +75,8 @@ export function cleanSettings(form: FormData, previous: Settings): Settings {
     // Empty keeps the description in the show's config.json.
     show_description: String(form.get("show_description") ?? "").slice(0, 600).trim(),
     retention_days: Number.isInteger(keep) ? Math.min(RETENTION.max, Math.max(RETENTION.min, keep)) : previous.retention_days,
+    // At least one reading has to stay, so unticking every box keeps what was saved.
+    skip_tracks: skip.length < TRACKS.length ? skip : previous.skip_tracks,
   };
 }
 

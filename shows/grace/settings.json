@@ -1,7 +1,10 @@
 {
   "voice": "af_heart",
   "voice_speed": 1.0,
-  "length": "full",
-  "jump_to": "",
-  "focus": ""
+  "length": "medium",
+  "jump_to": "9-16",
+  "focus": "",
+  "skip_tracks": [
+    "Old Testament"
+  ]
 }

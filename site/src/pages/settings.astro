@@ -1,7 +1,7 @@
 ---
 import Base from "../layouts/Base.astro";
 import { readFile, requestRemake, updateFile } from "../lib/github";
-import { LENGTHS, PLAN_DAYS, RETENTION, VOICES, cleanSettings, loadState, parseSettings, planLabel } from "../lib/show";
+import { LENGTHS, PLAN_DAYS, RETENTION, TRACKS, VOICES, cleanSettings, loadState, parseSettings, planLabel } from "../lib/show";
 import { DEMO_NOTICE, DEMO_STATE, isDemo } from "../lib/demo";
 
 const env = Astro.locals.runtime.env;
@@ -67,6 +67,13 @@ const settings = parseSettings(file?.text ?? null);
     </select>
     <p class="hint">Pick a day to move the show there once. It carries on from that day.</p>
 
+    <fieldset>
+      <legend>Readings to cover each day</legend>
+      {TRACKS.map((t) => (
+        <label class="check"><input type="checkbox" name="tracks" value={t} checked={!settings.skip_tracks.includes(t)} /> {t}</label>
+      ))}
+    </fieldset>
+
     <label for="focus">What should the show lean into?</label>
     <textarea id="focus" name="focus" maxlength="1000"
       placeholder="For example: more on how the Psalms apply to everyday life, fewer long quotes.">{settings.focus}</textarea>
@@ -82,7 +89,7 @@ const settings = parseSettings(file?.text ?? null);
 
     <button class="arrow" name="action" value="save">Save settings</button>
     <button class="arrow" name="action" value="remake">Save and remake today's episode</button>
-    <p class="hint">Remaking redoes the newest episode's audio with the voice and speed above. Length, plan day and focus
+    <p class="hint">Remaking redoes the newest episode's audio with the voice and speed above. Length, plan day, readings and focus
       change what gets written, so they start with the next morning's episode.</p>
   </form>
 </Base>

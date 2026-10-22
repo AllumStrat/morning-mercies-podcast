@@ -1,11 +1,11 @@
 # Morning Mercies
 
-Grace's private daily podcast on the Navigators Bible Reading Plan, plus a small password-protected site where she leaves feedback and changes how the show sounds. It started as a copy of Old Paths (AllumStrat/old-paths-podcast) and now runs on its own.
+Grace's private daily podcast on the Navigators Bible Reading Plan (Psalms and Wisdom, Gospel, and New Testament readings; the Old Testament track is left out), plus a small password-protected site where she leaves feedback and changes how the show sounds. It started as a copy of Old Paths (AllumStrat/old-paths-podcast) and now runs on its own.
 
 ## How it works
 
-1. **Scheduled task (Claude Code on the web, 4:30 AM Phoenix daily).** Its prompt is `ROUTINE_PROMPT.md`. Claude runs `python3 scripts/podcast.py next --show grace`, researches the day's readings, writes the script, and runs `python3 scripts/podcast.py stage`. That pushes the episode to a `claude/episode-grace-DATE` branch. This step needs no tokens.
-2. **GitHub Action (`.github/workflows/publish.yml`).** It triggers on that branch, turns the script into audio with the open Kokoro voice model on the Actions CPU, attaches the MP3 to a GitHub Release tagged `ep-grace-DATE`, updates the feed and series state on `gh-pages`, deletes audio older than 60 days, and deletes the staging branch. It uses GitHub's built-in token.
+1. **Scheduled task (Claude Code on the web, 4:03 AM Phoenix daily).** Its prompt is `ROUTINE_PROMPT.md`. Claude runs `python3 scripts/podcast.py next --show grace`, researches the day's readings, writes the script, and runs `python3 scripts/podcast.py stage`. That pushes the episode to a `claude/episode-grace-DATE` branch. This step needs no tokens.
+2. **GitHub Action (`.github/workflows/publish.yml`).** It triggers on that branch, turns the script into audio with the open Kokoro voice model on the Actions CPU, saves the MP3 next to the feed on `gh-pages` (GitHub Pages serves it as `audio/mpeg` with byte ranges, which Apple Podcasts needs; release downloads come back as attachments it won't play), updates the feed and series state, deletes audio older than the retention window, squashes `gh-pages` to a single commit so old audio doesn't pile up in history, and deletes the staging branch. It uses GitHub's built-in token.
 3. **GitHub Pages** serves the feed: `https://allumstrat.github.io/morning-mercies-podcast/grace/feed.xml`. The feed is marked private (`itunes_block`), so podcast directories won't list it.
 
 **First episode:** the show sets itself up when its first episode publishes. It creates the `gh-pages` branch, uploads the cover, and tries to switch on GitHub Pages. If Pages doesn't come on by itself, open Settings, then Pages, and choose "Deploy from a branch" with `gh-pages` and `/ (root)`.
@@ -15,7 +15,7 @@ Grace's private daily podcast on the Navigators Bible Reading Plan, plus a small
 ## Grace's settings
 
 - `shows/grace/config.json` holds the show's fixed details (title, description, starting voice).
-- `shows/grace/settings.json` (voice, speed, length, plan day, focus) and `shows/grace/feedback.jsonl` are written by the site in `site/`. Each morning's run reads them from its checkout.
+- `shows/grace/settings.json` (voice, speed, length, plan day, readings covered, focus) and `shows/grace/feedback.jsonl` are written by the site in `site/`. Each morning's run reads them from its checkout.
 - `shows/grace/STYLE.md` adjusts `STYLE.md` for her show and says how the writer uses her focus and feedback.
 - With no show named, every command in this repo uses Grace's show (`"default_show": "grace"` in `config.json`). `config.json` also holds shared settings like the time zone and retention.
 

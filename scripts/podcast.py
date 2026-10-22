@@ -43,6 +43,7 @@ CONFIG = BASE_CONFIG
 PLAN = json.loads((ROOT / "plan" / "navigators.json").read_text())
 DAYS = PLAN["days"]
 IDS = [d["id"] for d in DAYS]
+TRACKS = list(dict.fromkeys(r["track"] for d in DAYS for r in d["readings"]))
 TZ = ZoneInfo(CONFIG["timezone"])
 SYSTEM_CA = "/etc/ssl/certs/ca-certificates.crt"
 NAMESPACE = uuid.UUID("6f1d3c52-8a4e-4c43-9a3e-01da4ba50000")
@@ -55,7 +56,7 @@ JUMP_PATH = ROOT / "plan" / "jump_to.txt"
 SETTINGS = {}         # what the listener saved from the settings site (shows/NAME/settings.json)
 
 # What the settings site may change, and the word ranges behind each length.
-SETTABLE = ("voice", "voice_speed", "length", "jump_to", "focus", "show_description", "retention_days")
+SETTABLE = ("voice", "voice_speed", "length", "jump_to", "focus", "show_description", "retention_days", "skip_tracks")
 LENGTHS = {"short": (2200, 2600), "medium": (3300, 3800), "full": (4500, 5200)}
 SHOW_NAME = re.compile(r"^[a-z0-9][a-z0-9-]{0,30}$")
 
@@ -94,6 +95,9 @@ def set_show(name):
         cfg["retention_days"] = min(120, max(7, int(settings.get("retention_days", cfg["retention_days"]))))
     except (TypeError, ValueError):
         pass
+    skip = settings.get("skip_tracks")
+    if isinstance(skip, list) and set(skip) <= set(TRACKS) and len(set(skip)) < len(TRACKS):
+        cfg["skip_tracks"] = list(skip)
     SHOW, PREFIX, SETTINGS, CONFIG = name, f"{name}/", settings, cfg
     STATE_KEY = PREFIX + "state/series.json"
     JUMP_PATH = folder / "jump_to.txt"
@@ -171,8 +175,9 @@ class GitHub:
                      headers={"Accept": "application/vnd.github.raw+json"})
         return r.content.decode("utf-8") if r.status_code == 200 else None
 
-    def commit(self, files, message):
-        """Write several files to the data branch in one commit. files: {path: bytes|str}; value None deletes."""
+    def commit(self, files, message, squash=False):
+        """Write several files to the data branch in one commit. files: {path: bytes|str}; value None deletes.
+        squash makes the new commit the branch's only one, so audio kept on gh-pages never piles up in history."""
         import base64
 
         head = self.branch_sha()
@@ -188,8 +193,9 @@ class GitHub:
                                                        "encoding": "base64"}).json()["sha"]
             entries.append({"path": path, "mode": "100644", "type": "blob", "sha": blob})
         tree = self.req("POST", "/git/trees", json={"base_tree": base_tree, "tree": entries}).json()["sha"]
-        commit = self.req("POST", "/git/commits", json={"message": message, "tree": tree, "parents": [head]}).json()["sha"]
-        self.req("PATCH", f"/git/refs/heads/{DATA_BRANCH}", json={"sha": commit})
+        commit = self.req("POST", "/git/commits", json={"message": message, "tree": tree,
+                                                         "parents": [] if squash else [head]}).json()["sha"]
+        self.req("PATCH", f"/git/refs/heads/{DATA_BRANCH}", json={"sha": commit, "force": squash})
 
     # ---- releases (audio)
 
@@ -293,7 +299,10 @@ def real_episodes(state):
 # ---------------------------------------------------------------- plan
 
 def plan_day(day_id):
-    return DAYS[IDS.index(day_id)]
+    """One day of the plan, without the readings this show skips (skip_tracks, e.g. the Old Testament)."""
+    day = DAYS[IDS.index(day_id)]
+    skip = set(CONFIG.get("skip_tracks") or [])
+    return {**day, "readings": [r for r in day["readings"] if r["track"] not in skip]}
 
 
 def next_id(day_id):
@@ -554,7 +563,7 @@ def show_notes_text(meta):
     return "\n".join(parts)
 
 
-def add_episode(state, *, date, day_id, meta, tag, release_id, mp3_url, size, duration, published):
+def add_episode(state, *, date, day_id, meta, tag, release_id, mp3_url, size, duration, published, audio_path=None):
     number = len(state["episodes"]) + 1
     readings = meta.get("readings") or ([r["passage"] for r in plan_day(day_id)["readings"]] if day_id in IDS else [])
     state["episodes"].append({
@@ -571,6 +580,7 @@ def add_episode(state, *, date, day_id, meta, tag, release_id, mp3_url, size, du
         "tag": tag,
         "release_id": release_id,
         "mp3_url": mp3_url,
+        **({"audio_path": audio_path} if audio_path else {}),
         "bytes": size,
         "duration": duration,
         "transcript_path": f"{PREFIX}transcripts/{tag}.txt",
@@ -581,16 +591,40 @@ def add_episode(state, *, date, day_id, meta, tag, release_id, mp3_url, size, du
     return state["episodes"][-1]
 
 
+def pages_audio():
+    """A show with "audio_host": "pages" keeps its MP3s on gh-pages next to feed.xml. GitHub Pages serves them
+    as audio/mpeg with byte ranges, which Apple Podcasts needs; release downloads come back as attachments."""
+    return CONFIG.get("audio_host") == "pages"
+
+
+def store_audio(c, tag, title, body, mp3):
+    """Upload one episode's MP3. Returns (release_id, url, audio_path, files for the next commit)."""
+    if pages_audio():
+        path = f"{PREFIX}audio/{tag}.mp3"
+        return None, pages_url(path), path, {path: Path(mp3).read_bytes()}
+    release_id, url = c.upload_episode(tag, title, body, mp3)
+    return release_id, url, None, {}
+
+
+def drop_audio(c, ep):
+    """Remove one episode's MP3. Returns the deletions for the next commit (none for a release)."""
+    if ep.get("audio_path"):
+        return {ep["audio_path"]: None}
+    if ep.get("release_id"):
+        c.delete_episode(ep["release_id"], ep["tag"])
+    return {}
+
+
 def prune(c, state):
-    """Delete the audio (the GitHub Release) for episodes older than the retention window."""
+    """Delete the audio for episodes older than the retention window. Returns (count, files for the next commit)."""
     cutoff = now().date() - dt.timedelta(days=int(CONFIG["retention_days"]))
-    removed = 0
+    removed, files = 0, {}
     for ep in state["episodes"]:
         if not ep.get("audio_deleted") and dt.date.fromisoformat(ep["date"]) < cutoff:
-            c.delete_episode(ep["release_id"], ep["tag"])
+            files.update(drop_audio(c, ep))
             ep["audio_deleted"] = True
             removed += 1
-    return removed
+    return removed, files
 
 
 def validate(raw, meta, allow_short=False):
@@ -604,7 +638,9 @@ def validate(raw, meta, allow_short=False):
     return words
 
 
-def publish_episode(c, *, date, raw, meta, research="", plan_day_id=None, jump_applied=None, force=False):
+def publish_episode(c, *, date, raw, meta, research="", plan_day_id=None, jump_applied=None, force=False,
+                    replace=False):
+    """replace swaps out the episode already published for this date (new script, new audio, same place in the feed)."""
     state = load_state(c)
     first_files = {}
     if state is None and SHOW:
@@ -615,13 +651,15 @@ def publish_episode(c, *, date, raw, meta, research="", plan_day_id=None, jump_a
         first_files[".nojekyll"] = ""
     if state is None:
         sys.exit("No series state found. Run bootstrap first.")
-    if any(e["date"] == date for e in real_episodes(state)) and not force:
+    replaced = [e for e in real_episodes(state) if e["date"] == date] if replace else []
+    if any(e["date"] == date for e in real_episodes(state)) and not (force or replace):
         print(f"An episode for {date} already exists; skipping.", file=sys.stderr)
         return None
+    state["episodes"] = [e for e in state["episodes"] if e not in replaced]
     if jump_applied:
         state["last_jump_applied"] = jump_applied
     day_id = plan_day_id or state["next_plan_day"]
-    tag = tag_for(date) + ("" if not force else "-" + now().strftime("%H%M%S"))
+    tag = tag_for(date) + ("" if not (force or replaced) else "-" + now().strftime("%H%M%S"))
     if c.release_exists(tag):
         tag = f"{tag_for(date)}-{day_id}"  # an earlier episode was re-dated and still holds this tag
 
@@ -631,24 +669,30 @@ def publish_episode(c, *, date, raw, meta, research="", plan_day_id=None, jump_a
     size, duration = mp3.stat().st_size, mp3_duration(mp3)
     print(f"audio: {size/1e6:.1f} MB, {duration//60}:{duration%60:02d}", file=sys.stderr)
 
-    release_id, mp3_url = c.upload_episode(tag, meta["title"], show_notes_text(meta), mp3)
+    release_id, mp3_url, audio_path, audio_files = store_audio(c, tag, meta["title"], show_notes_text(meta), mp3)
     ep = add_episode(state, date=date, day_id=day_id, meta=meta, tag=tag, release_id=release_id, mp3_url=mp3_url,
-                     size=size, duration=duration, published=email.utils.format_datetime(now()))
+                     size=size, duration=duration, published=email.utils.format_datetime(now()), audio_path=audio_path)
     state["next_plan_day"] = next_id(day_id) if day_id in IDS else state["next_plan_day"]
-    removed = prune(c, state)
+    removed, pruned_files = prune(c, state)
+    for old in replaced:
+        audio_files.update(drop_audio(c, old))
+        audio_files.update({old["transcript_path"]: None, old["notes_path"]: None})
     c.commit({
+        **pruned_files,
+        **audio_files,
         **first_files,
         ep["transcript_path"]: raw,
         ep["notes_path"]: show_notes_text(meta) + ("\n\n---\nResearch notes\n\n" + research if research else ""),
         STATE_KEY: json.dumps(state, indent=1),
         PREFIX + "feed.xml": build_feed(state),
-    }, f"{CONFIG['show_title'] + ' e' if SHOW else 'E'}pisode {ep['number']}: {meta['title']}")
+    }, f"{CONFIG['show_title'] + ' e' if SHOW else 'E'}pisode {ep['number']}: {meta['title']}", squash=pages_audio())
     if first_files:
         c.enable_pages()
     c.request_pages_build()
     result = {"status": "published", "show": SHOW or "default", "episode": ep["number"], "plan_day": day_id,
               "next_plan_day": state["next_plan_day"], "audio": mp3_url,
-              "feed": pages_url(PREFIX + "feed.xml"), "pruned_old_episodes": removed}
+              "feed": pages_url(PREFIX + "feed.xml"), "pruned_old_episodes": removed,
+              "replaced": [e["tag"] for e in replaced]}
     print(json.dumps(result, indent=1))
     return result
 
@@ -686,6 +730,7 @@ def cmd_stage(args):
         shutil.copy(WORK / "research.md", folder / "research.md")
     (folder / "plan.json").write_text(json.dumps({"plan_day": today["plan_day"],
                                                   "jump_applied": today.get("jump_applied"),
+                                                  **({"replace": True} if args.replace else {}),
                                                   **({"show": SHOW} if SHOW else {})}, indent=1))
     branch = f"claude/episode-{SHOW}-{date}" if SHOW else f"claude/episode-{date}"
 
@@ -718,7 +763,8 @@ def cmd_publish_incoming(args):
         set_show(plan.get("show"))
         validate(raw, meta, allow_short=True)
         publish_episode(c, date=folder.name, raw=raw, meta=meta, research=research,
-                        plan_day_id=plan.get("plan_day"), jump_applied=plan.get("jump_applied"))
+                        plan_day_id=plan.get("plan_day"), jump_applied=plan.get("jump_applied"),
+                        replace=bool(plan.get("replace")))
     branch = os.environ.get("SOURCE_BRANCH", "")
     if branch.startswith("claude/episode-"):
         c.delete_branch(branch)
@@ -743,15 +789,19 @@ def cmd_remake(args):
         synthesize(clean_for_speech(raw), mp3)
         size, duration = mp3.stat().st_size, mp3_duration(mp3)
         tag = f"{tag_for(ep['date'])}-r{now().strftime('%H%M%S')}"
-        old_release, old_tag = ep["release_id"], ep["tag"]
-        release_id, mp3_url = c.upload_episode(tag, ep["title"], ep["description"], mp3)
+        old = dict(ep)
+        release_id, mp3_url, audio_path, files = store_audio(c, tag, ep["title"], ep["description"], mp3)
+        ep.pop("audio_path", None)
+        if audio_path:
+            ep["audio_path"] = audio_path
         # A new guid makes podcast apps fetch the new audio instead of keeping the old download.
         ep.update(tag=tag, release_id=release_id, mp3_url=mp3_url, bytes=size, duration=duration,
                   guid=episode_guid(tag), voice=CONFIG["voice"], voice_speed=CONFIG.get("voice_speed", 1.0),
                   remade=email.utils.format_datetime(now()))
-        c.commit({STATE_KEY: json.dumps(state, indent=1), PREFIX + "feed.xml": build_feed(state)},
-                 f"{CONFIG['show_title']}: remake episode {ep['number']} ({CONFIG['voice']}, {CONFIG.get('voice_speed', 1.0)}x)")
-        c.delete_episode(old_release, old_tag)
+        files.update(drop_audio(c, old))
+        c.commit({**files, STATE_KEY: json.dumps(state, indent=1), PREFIX + "feed.xml": build_feed(state)},
+                 f"{CONFIG['show_title']}: remake episode {ep['number']} ({CONFIG['voice']}, {CONFIG.get('voice_speed', 1.0)}x)",
+                 squash=pages_audio())
         c.request_pages_build()
         print(json.dumps({"status": "remade", "show": SHOW or "default", "episode": ep["number"], "audio": mp3_url,
                           "voice": CONFIG["voice"], "voice_speed": CONFIG.get("voice_speed", 1.0),
@@ -774,15 +824,6 @@ def cdata(text):
     return "<![CDATA[" + text.replace("]]>", "]] >") + "]]>"
 
 
-def enclosure_url(ep):
-    """Where podcast apps fetch the audio. A show with audio_base gets it through the settings
-    site's /audio/ route, which serves GitHub's release file as audio/mpeg so Apple can play it."""
-    base, marker = CONFIG.get("audio_base"), "/releases/download/"
-    if base and marker in ep["mp3_url"]:
-        return base.rstrip("/") + "/audio/" + ep["mp3_url"].split(marker, 1)[1]
-    return ep["mp3_url"]
-
-
 def build_feed(state):
     cfg = CONFIG
     items = []
@@ -793,7 +834,7 @@ def build_feed(state):
       <title>{escape(ep['title'])}</title>
       <description>{cdata(ep['description'])}</description>
       <itunes:summary>{cdata(ep['description'])}</itunes:summary>
-      <enclosure url="{escape(enclosure_url(ep))}" length="{ep['bytes']}" type="audio/mpeg"/>
+      <enclosure url="{escape(ep['mp3_url'])}" length="{ep['bytes']}" type="audio/mpeg"/>
       <guid isPermaLink="false">{ep['guid']}</guid>
       <pubDate>{ep['published']}</pubDate>
       <itunes:duration>{fmt_duration(ep['duration'])}</itunes:duration>
@@ -833,7 +874,7 @@ def cmd_feed(args):
     files = {PREFIX + "feed.xml": build_feed(state)}
     if SHOW and (ROOT / "shows" / SHOW / "cover.png").exists():
         files[PREFIX + "cover.png"] = cover_bytes()
-    c.commit(files, "Rebuild feed")
+    c.commit(files, "Rebuild feed", squash=pages_audio())
     print(pages_url(PREFIX + "feed.xml"))
 
 
@@ -896,6 +937,8 @@ def main():
     st = sub.add_parser("stage", help="push today's finished episode to a claude/episode-DATE branch")
     st.add_argument("--date")
     st.add_argument("--allow-short", action="store_true")
+    st.add_argument("--replace", action="store_true",
+                    help="replace the episode already published for this date instead of skipping")
     st.set_defaults(func=cmd_stage)
 
     pi = sub.add_parser("publish-incoming", help="(GitHub Action) publish staged episodes")

@@ -35,13 +35,14 @@ class FakeGitHub:
     """Stands in for the GitHub API: gh-pages files and releases kept in memory."""
 
     def __init__(self):
-        self.files, self.releases, self.deleted_branches = {}, {}, []
+        self.files, self.releases, self.deleted_branches, self.squashed = {}, {}, [], []
 
     def get_text(self, path):
         body = self.files.get(path)
         return body.decode() if isinstance(body, bytes) else body
 
-    def commit(self, files, message):
+    def commit(self, files, message, squash=False):
+        self.squashed.append(squash)
         for path, body in files.items():
             if body is None:
                 self.files.pop(path, None)
@@ -118,7 +119,7 @@ class ShowsTest(unittest.TestCase):
         return json.loads(out[out.rindex("\n{") + 1:] if "\n{" in out else out)  # git's own output comes first
 
     def publish_branch(self, branch):
-        clone = self.tmp / branch.replace("/", "_")
+        clone = self.tmp / f"{branch.replace('/', '_')}-{len(list(self.tmp.iterdir()))}"
         git(self.tmp, "clone", "-q", "-b", branch, str(self.remote), str(clone))
         mod = load(clone, f"pub_{branch}")
         fake_audio(mod)
@@ -144,8 +145,9 @@ class ShowsTest(unittest.TestCase):
 
         self.publish_branch(staged["branch"])
         tag = f"ep-grace-{DATE}"
-        self.assertIn(tag, self.gh.releases)
-        for path in ("grace/state/series.json", "grace/feed.xml", "grace/cover.png",
+        self.assertEqual(self.gh.releases, {})               # Grace's audio lives on gh-pages, not in a release
+        self.assertTrue(all(self.gh.squashed))               # and gh-pages is kept to one commit
+        for path in (f"grace/audio/{tag}.mp3", "grace/state/series.json", "grace/feed.xml", "grace/cover.png",
                      f"grace/transcripts/{tag}.txt", f"grace/notes/{tag}.md"):
             self.assertIn(path, self.gh.files)
         self.assertNotIn("feed.xml", self.gh.files)          # the original show's feed is untouched
@@ -154,9 +156,11 @@ class ShowsTest(unittest.TestCase):
         # Listed on Apple Podcasts: no block, and an owner email Apple can verify.
         self.assertNotIn("<itunes:block>", feed)
         self.assertIn("<itunes:email>jacob@allumstrategies.com</itunes:email>", feed)
-        # Audio goes through the settings site, which serves it as audio/mpeg for Apple.
-        self.assertIn(f'url="https://morningmercies.devbysalt.com/audio/{tag}/grace-{DATE}.mp3"', feed)
+        # Pages serves the MP3 as audio/mpeg with byte ranges, which Apple's player needs.
+        self.assertIn(f'/grace/audio/{tag}.mp3"', feed)
         self.assertNotIn("releases/download", feed)
+        self.assertEqual(len(today["readings"]), 3)          # no Old Testament track
+        self.assertNotIn("Old Testament", [r["track"] for r in today["readings"]])
         self.assertEqual(self.gh.deleted_branches, [staged["branch"]])
 
         # The next day continues from the saved state and reads yesterday's transcript path.
@@ -231,13 +235,48 @@ class ShowsTest(unittest.TestCase):
         self.assertEqual((ep["voice"], ep["voice_speed"]), ("af_bella", 1.1))
         self.assertNotEqual(ep["tag"], old["tag"])
         self.assertNotEqual(ep["guid"], old["guid"])
-        self.assertNotIn(old["tag"], self.gh.releases)
-        self.assertIn(ep["tag"], self.gh.releases)
+        self.assertNotIn(old["audio_path"], self.gh.files)
+        self.assertIn(ep["audio_path"], self.gh.files)
         feed = self.gh.get_text("grace/feed.xml")
-        self.assertIn(f"/audio/{ep['tag']}/", feed)
+        self.assertIn(f"/grace/audio/{ep['tag']}.mp3", feed)
         self.assertIn("Grace&#x27;s mornings." if "&#x27;" in feed else "Grace's mornings.", feed)
         self.assertEqual(mod.CONFIG["retention_days"], 30)
         self.assertIn("claude/remake-grace-1761000000", self.gh.deleted_branches)
+
+    def test_replace_todays_episode(self):
+        settings = self.repo / "shows" / "grace" / "settings.json"
+        settings.write_text(json.dumps({"jump_to": "", "length": "medium"}))  # before the move to 9-16
+        self.run_next("grace", DATE, None)
+        self.write_episode(3500)
+        self.publish_branch(self.stage()["branch"])
+        old = json.loads(self.gh.get_text("grace/state/series.json"))["episodes"][-1]
+
+        settings.write_text(json.dumps({"jump_to": "9-16", "length": "medium"}))
+        mod = load(self.repo, "replace_next")
+        mod.load_state_readonly = lambda: json.loads(self.gh.get_text("grace/state/series.json"))
+        mod.set_show("grace")
+        os.chdir(self.repo)
+        mod.cmd_next(argparse.Namespace(date=DATE, force=True))
+        today = json.loads((self.repo / "work" / "today.json").read_text())
+        self.assertEqual(today["plan_day"], "9-16")
+        self.assertEqual([r["passage"] for r in today["readings"]],
+                         ["Luke 23:26-31", "Hebrews 9:11-28", "Proverbs 26:1-16"])
+        self.write_episode(3500)
+        env = {k: v for k, v in os.environ.items() if k != "SHOW"}
+        subprocess.run([sys.executable, "scripts/podcast.py", "stage", "--replace"], cwd=self.repo, env=env,
+                       check=True, capture_output=True)
+        self.publish_branch(f"claude/episode-grace-{DATE}")
+
+        state = json.loads(self.gh.get_text("grace/state/series.json"))
+        self.assertEqual(len(state["episodes"]), 1)
+        ep = state["episodes"][0]
+        self.assertEqual((ep["number"], ep["plan_day"]), (1, "9-16"))
+        self.assertNotEqual(ep["guid"], old["guid"])
+        self.assertEqual(state["next_plan_day"], "9-17")
+        self.assertEqual(state["last_jump_applied"], "9-16")
+        for path in (old["audio_path"], old["transcript_path"], old["notes_path"]):
+            self.assertNotIn(path, self.gh.files)
+        self.assertIn(ep["audio_path"], self.gh.files)
 
     def test_remake_before_any_episode_is_harmless(self):
         mod = load(self.repo, "remake_empty")

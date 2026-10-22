@@ -4,7 +4,7 @@ Use WebSearch to find sources and WebFetch to read them. Quote only what you fet
 
 ## Reading the passages
 
-- The ESV text is available at Bible Gateway: `https://www.biblegateway.com/passage/?search=Jeremiah+36&version=ESV`. Read every verse of all four readings before you research anything.
+- The ESV text is available at Bible Gateway: `https://www.biblegateway.com/passage/?search=Jeremiah+36&version=ESV`. Read every verse of every reading in `work/today.json` before you research anything.
 
 ## Verse-by-verse classic commentary (public domain)
 

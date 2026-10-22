@@ -1,7 +1,7 @@
 name: Publish episode
 
 # The daily Claude Code task pushes a finished script to a claude/episode-DATE branch.
-# This workflow turns it into audio, attaches it to a GitHub Release, updates the feed
+# This workflow turns it into audio, stores it (on gh-pages for Grace, a GitHub Release otherwise), updates the feed
 # on gh-pages, deletes audio older than 60 days, and removes the staging branch.
 
 on:
