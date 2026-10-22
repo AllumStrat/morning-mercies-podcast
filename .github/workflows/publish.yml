@@ -34,3 +34,20 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
           SOURCE_BRANCH: ${{ github.ref_name }}
+      # Podcast apps need the audio served as audio/mpeg with byte ranges. Wait for Pages to
+      # publish the new feed, then print what the newest episode's audio returns.
+      - name: Check the newest episode's audio
+        run: |
+          base="https://$(echo "$GITHUB_REPOSITORY_OWNER" | tr A-Z a-z).github.io/${GITHUB_REPOSITORY#*/}"
+          for show in $(ls shows); do
+            url=""
+            for i in $(seq 1 40); do
+              url=$(curl -fsS "$base/$show/feed.xml?t=$(date +%s)" | grep -o 'enclosure url="[^"]*"' | head -1 | cut -d'"' -f2) || true
+              if [[ "$url" == "$base/"* ]] && curl -fsI "$url" > /dev/null 2>&1; then break; fi
+              sleep 15
+            done
+            echo "== $show: $url"
+            curl -sSI "$url" | grep -iE '^(HTTP|content-type|content-length|accept-ranges)'
+            curl -sS -o /dev/null -D - -r 0-99 "$url" | grep -iE '^(HTTP|content-type|content-range)'
+            curl -sSI "$url" | grep -qi '^content-type: audio/mpeg' || { echo "::error::$show audio is not served as audio/mpeg"; exit 1; }
+          done
