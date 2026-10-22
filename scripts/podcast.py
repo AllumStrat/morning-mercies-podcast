@@ -55,7 +55,7 @@ JUMP_PATH = ROOT / "plan" / "jump_to.txt"
 SETTINGS = {}         # what the listener saved from the settings site (shows/NAME/settings.json)
 
 # What the settings site may change, and the word ranges behind each length.
-SETTABLE = ("voice", "voice_speed", "length", "jump_to", "focus")
+SETTABLE = ("voice", "voice_speed", "length", "jump_to", "focus", "show_description", "retention_days")
 LENGTHS = {"short": (2200, 2600), "medium": (3300, 3800), "full": (4500, 5200)}
 SHOW_NAME = re.compile(r"^[a-z0-9][a-z0-9-]{0,30}$")
 
@@ -88,6 +88,12 @@ def set_show(name):
         pass
     if settings.get("length") in LENGTHS:
         cfg["target_words_min"], cfg["target_words_max"] = LENGTHS[settings["length"]]
+    if isinstance(settings.get("show_description"), str) and settings["show_description"].strip():
+        cfg["show_description"] = settings["show_description"].strip()[:600]
+    try:
+        cfg["retention_days"] = min(120, max(7, int(settings.get("retention_days", cfg["retention_days"]))))
+    except (TypeError, ValueError):
+        pass
     SHOW, PREFIX, SETTINGS, CONFIG = name, f"{name}/", settings, cfg
     STATE_KEY = PREFIX + "state/series.json"
     JUMP_PATH = folder / "jump_to.txt"
@@ -719,6 +725,43 @@ def cmd_publish_incoming(args):
         print(f"deleted staging branch {branch}")
 
 
+def cmd_remake(args):
+    """GitHub Action side: render the newest episode again with the show's current voice and speed.
+    The settings site asks for this by pushing a claude/remake-SHOW-TIME branch."""
+    c = client()
+    state = load_state(c)
+    live = [e for e in real_episodes(state or {}) if not e.get("audio_deleted")]
+    if not live:
+        print("No episode to remake yet; the next one will use the saved settings.")
+    else:
+        ep = live[-1]
+        raw = c.get_text(ep["transcript_path"])
+        if not raw:
+            sys.exit(f"Transcript {ep['transcript_path']} is missing; cannot remake episode {ep['number']}.")
+        WORK.mkdir(exist_ok=True)
+        mp3 = WORK / f"{SHOW or 'old-paths'}-{ep['date']}.mp3"
+        synthesize(clean_for_speech(raw), mp3)
+        size, duration = mp3.stat().st_size, mp3_duration(mp3)
+        tag = f"{tag_for(ep['date'])}-r{now().strftime('%H%M%S')}"
+        old_release, old_tag = ep["release_id"], ep["tag"]
+        release_id, mp3_url = c.upload_episode(tag, ep["title"], ep["description"], mp3)
+        # A new guid makes podcast apps fetch the new audio instead of keeping the old download.
+        ep.update(tag=tag, release_id=release_id, mp3_url=mp3_url, bytes=size, duration=duration,
+                  guid=episode_guid(tag), voice=CONFIG["voice"], voice_speed=CONFIG.get("voice_speed", 1.0),
+                  remade=email.utils.format_datetime(now()))
+        c.commit({STATE_KEY: json.dumps(state, indent=1), PREFIX + "feed.xml": build_feed(state)},
+                 f"{CONFIG['show_title']}: remake episode {ep['number']} ({CONFIG['voice']}, {CONFIG.get('voice_speed', 1.0)}x)")
+        c.delete_episode(old_release, old_tag)
+        c.request_pages_build()
+        print(json.dumps({"status": "remade", "show": SHOW or "default", "episode": ep["number"], "audio": mp3_url,
+                          "voice": CONFIG["voice"], "voice_speed": CONFIG.get("voice_speed", 1.0),
+                          "feed": pages_url(PREFIX + "feed.xml")}, indent=1))
+    branch = os.environ.get("SOURCE_BRANCH", "")
+    if branch.startswith("claude/remake-"):
+        c.delete_branch(branch)
+        print(f"deleted request branch {branch}")
+
+
 # ---------------------------------------------------------------- feed
 
 def fmt_duration(seconds):
@@ -845,6 +888,10 @@ def main():
 
     pi = sub.add_parser("publish-incoming", help="(GitHub Action) publish staged episodes")
     pi.set_defaults(func=cmd_publish_incoming)
+
+    rm = sub.add_parser("remake", help="(GitHub Action) render the newest episode again with current settings")
+    rm.add_argument("--show")
+    rm.set_defaults(func=cmd_remake)
 
     t = sub.add_parser("transcript")
     t.add_argument("which", nargs="?", default="last", help="'last' or a date like 2026-10-19")

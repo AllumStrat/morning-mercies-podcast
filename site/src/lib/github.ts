@@ -61,3 +61,20 @@ export async function updateFile(
     throw new Error(`GitHub write ${path} failed: ${r.status}`);
   }
 }
+
+/**
+ * Ask the "Remake episode" workflow to render the newest episode again with the saved voice and speed.
+ * It runs on a pushed claude/remake-SHOW-TIME branch, so the token needs only Contents read and write.
+ */
+export async function requestRemake(env: GitHubEnv & Pick<Env, "SHOW">): Promise<void> {
+  const base = `https://api.github.com/repos/${env.GITHUB_REPO}/git`;
+  const head = await fetch(`${base}/ref/heads/${encodeURIComponent(env.GITHUB_BRANCH)}`, { headers: headers(env) });
+  if (!head.ok) throw new Error(`GitHub read ${env.GITHUB_BRANCH} failed: ${head.status}`);
+  const sha = ((await head.json()) as { object: { sha: string } }).object.sha;
+  const r = await fetch(`${base}/refs`, {
+    method: "POST",
+    headers: { ...headers(env), "Content-Type": "application/json" },
+    body: JSON.stringify({ ref: `refs/heads/claude/remake-${env.SHOW}-${Date.now()}`, sha }),
+  });
+  if (!r.ok) throw new Error(`GitHub remake request failed: ${r.status}`);
+}

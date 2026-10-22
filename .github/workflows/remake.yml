@@ -1,0 +1,39 @@
+name: Remake episode
+
+# The settings site's "Save and remake" button pushes a claude/remake-SHOW-TIME branch.
+# This renders the show's newest episode again with its saved voice and speed, swaps the
+# audio in the feed, and removes the request branch. It never writes a new script.
+
+on:
+  push:
+    branches: ["claude/remake-*"]
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: publish-episode
+  cancel-in-progress: false
+
+jobs:
+  remake:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: sudo apt-get update -q && sudo apt-get install -y -q espeak-ng ffmpeg
+      - run: pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - run: pip install -r requirements.txt
+      - name: Remake
+        run: |
+          show="${SOURCE_BRANCH#claude/remake-}"
+          show="${show%-*}"
+          python scripts/podcast.py remake --show "$show"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          SOURCE_BRANCH: ${{ github.ref_name }}

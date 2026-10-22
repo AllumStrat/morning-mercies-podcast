@@ -1,7 +1,7 @@
 ---
 import Base from "../layouts/Base.astro";
-import { readFile, updateFile } from "../lib/github";
-import { LENGTHS, PLAN_DAYS, VOICES, cleanSettings, loadState, parseSettings, planLabel } from "../lib/show";
+import { readFile, requestRemake, updateFile } from "../lib/github";
+import { LENGTHS, PLAN_DAYS, RETENTION, VOICES, cleanSettings, loadState, parseSettings, planLabel } from "../lib/show";
 import { DEMO_NOTICE, DEMO_STATE, isDemo } from "../lib/demo";
 
 const env = Astro.locals.runtime.env;
@@ -13,6 +13,7 @@ const demo = isDemo(env);
 if (Astro.request.method === "POST" && demo) return Astro.redirect("/settings?demo=1");
 if (Astro.request.method === "POST") {
   const form = await Astro.request.formData();
+  const remake = form.get("action") === "remake";
   try {
     await updateFile(
       env,
@@ -20,19 +21,29 @@ if (Astro.request.method === "POST") {
       (current) => JSON.stringify(cleanSettings(form, parseSettings(current)), null, 2) + "\n",
       "Update settings",
     );
-    return Astro.redirect("/settings?saved=1");
+    if (!remake) return Astro.redirect("/settings?saved=1");
+    try {
+      await requestRemake(env);
+      return Astro.redirect("/settings?remade=1");
+    } catch (e) {
+      console.error(e);
+      return Astro.redirect("/settings?saved=1&remake_failed=1");
+    }
   } catch (e) {
     console.error(e);
     error = "Those settings didn't save. Please try again in a minute.";
   }
 }
 if (Astro.url.searchParams.get("saved")) notice = "Saved. The next episode will use these settings.";
+if (Astro.url.searchParams.get("remake_failed")) error = "Your settings saved, but the remake didn't start. Try the button again in a minute.";
+if (Astro.url.searchParams.get("remade"))
+  notice = "Saved, and the newest episode is being remade with this voice and speed. It replaces the old audio in your podcast app in about half an hour.";
 if (Astro.url.searchParams.get("demo")) notice = DEMO_NOTICE;
 
 const [file, state] = demo ? [null, DEMO_STATE] : await Promise.all([readFile(env, path).catch(() => null), loadState(env)]);
 const settings = parseSettings(file?.text ?? null);
 ---
-<Base title="Make it yours" eyebrow="Settings" lede="Pick the voice, pace, length and focus. The next morning's episode follows them.">
+<Base title="Make it yours" eyebrow="Settings" lede="Pick the voice, pace, length and focus. The next morning's episode follows them, or remake today's right away.">
   {notice && <p class="notice">{notice}</p>}
   {error && <p class="notice error">{error}</p>}
   <form method="post" class="card">
@@ -60,7 +71,19 @@ const settings = parseSettings(file?.text ?? null);
     <textarea id="focus" name="focus" maxlength="1000"
       placeholder="For example: more on how the Psalms apply to everyday life, fewer long quotes.">{settings.focus}</textarea>
 
-    <button class="arrow">Save settings</button>
+    <label for="show_description">Show description in your podcast app</label>
+    <textarea id="show_description" name="show_description" maxlength="600"
+      placeholder="Leave empty to keep the current description.">{settings.show_description}</textarea>
+
+    <label for="retention_days">Keep episodes for (days)</label>
+    <input id="retention_days" name="retention_days" type="number" inputmode="numeric"
+      min={RETENTION.min} max={RETENTION.max} step="1" value={settings.retention_days} />
+    <p class="hint">Older episodes drop out of the feed. Between {RETENTION.min} and {RETENTION.max} days.</p>
+
+    <button class="arrow" name="action" value="save">Save settings</button>
+    <button class="arrow" name="action" value="remake">Save and remake today's episode</button>
+    <p class="hint">Remaking redoes the newest episode's audio with the voice and speed above. Length, plan day and focus
+      change what gets written, so they start with the next morning's episode.</p>
   </form>
 </Base>
 

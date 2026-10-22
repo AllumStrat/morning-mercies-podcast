@@ -202,6 +202,47 @@ class ShowsTest(unittest.TestCase):
         self.assertIn(".nojekyll", self.gh.files)
         self.assertTrue(getattr(self.gh, "pages_enabled", False))
 
+    def test_remake_swaps_audio_with_new_voice(self):
+        self.run_next("grace", DATE, None)
+        self.write_episode(4600)
+        self.publish_branch(self.stage()["branch"])
+        old = json.loads(self.gh.get_text("grace/state/series.json"))["episodes"][-1]
+
+        (self.repo / "shows" / "grace" / "settings.json").write_text(json.dumps(
+            {"voice": "af_bella", "voice_speed": 1.1, "show_description": "Grace's mornings.", "retention_days": 30}))
+        mod = load(self.repo, "remake")
+        fake_audio(mod)
+        mod.client = lambda: self.gh
+        os.environ["SOURCE_BRANCH"] = "claude/remake-grace-1761000000"
+        try:
+            os.chdir(self.repo)
+            mod.set_show("grace")
+            mod.cmd_remake(argparse.Namespace())
+        finally:
+            os.environ.pop("SOURCE_BRANCH", None)
+
+        state = json.loads(self.gh.get_text("grace/state/series.json"))
+        ep = state["episodes"][-1]
+        self.assertEqual(len(state["episodes"]), 1)
+        self.assertEqual((ep["voice"], ep["voice_speed"]), ("af_bella", 1.1))
+        self.assertNotEqual(ep["tag"], old["tag"])
+        self.assertNotEqual(ep["guid"], old["guid"])
+        self.assertNotIn(old["tag"], self.gh.releases)
+        self.assertIn(ep["tag"], self.gh.releases)
+        feed = self.gh.get_text("grace/feed.xml")
+        self.assertIn(ep["mp3_url"], feed)
+        self.assertIn("Grace&#x27;s mornings." if "&#x27;" in feed else "Grace's mornings.", feed)
+        self.assertEqual(mod.CONFIG["retention_days"], 30)
+        self.assertIn("claude/remake-grace-1761000000", self.gh.deleted_branches)
+
+    def test_remake_before_any_episode_is_harmless(self):
+        mod = load(self.repo, "remake_empty")
+        mod.client = lambda: self.gh
+        os.chdir(self.repo)
+        mod.set_show("grace")
+        mod.cmd_remake(argparse.Namespace())
+        self.assertEqual(self.gh.releases, {})
+
     def test_original_show_unchanged(self):
         state = {"next_plan_day": "10-20", "last_jump_applied": None, "episodes": []}
         today = self.run_next("", DATE, state)

@@ -21,6 +21,16 @@ https://morning-mercies.jacob-274.workers.dev. `SESSION_SECRET` is already set. 
 `SITE_PASSWORD` and `GITHUB_TOKEN` in the Cloudflare dashboard (Workers & Pages, morning-mercies,
 Settings, Variables and Secrets, type Secret). Until `SITE_PASSWORD` exists, no password works.
 
+## Save and remake
+
+The settings page has two buttons. "Save settings" commits `shows/grace/settings.json` for the next
+morning's run. "Save and remake today's episode" saves too, then pushes an empty
+`claude/remake-grace-TIME` branch. The "Remake episode" workflow renders the newest episode again
+with the saved voice and speed, swaps the audio in the feed (with a new guid so podcast apps fetch
+it), deletes the old audio, and removes the branch. It doesn't write a new script, so length, plan
+day and focus take effect from the next morning's episode. The token needs nothing beyond Contents
+read and write.
+
 ## Deploy by hand (only if Workers Builds is ever disconnected)
 
 1. Create a fine-grained GitHub token: github.com, Settings, Developer settings, Fine-grained
